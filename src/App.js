@@ -2,10 +2,11 @@ import { Provider } from 'mobx-react'
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Navigation from "./components/navigation";
+//import Navigation from "./components/navigation";
 import Home from "./components/pages/home";
 import Signin from "./components/pages/signin";
 import Welcome from "./components/pages/welcome";
+import Footer from "./components/footer";
 
 import RegistrationTerms from "./components/pages/registration/terms";
 import RegistrationAlternatives from "./components/pages/registration/alternatives";
@@ -51,7 +52,6 @@ function App() {
     <div className="App">
       <Provider {...stores}>
         <BrowserRouter>
-          <Navigation />
           <Switch>
             <Route path="/welcome" component={Welcome} />
             <Route path="/signin" component={Signin} />
