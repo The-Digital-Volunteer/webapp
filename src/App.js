@@ -8,7 +8,6 @@ import Signin from "./components/pages/signin";
 import Welcome from "./components/pages/welcome";
 
 import RegistrationTerms from "./components/pages/registration/terms";
-import TermsPagination from "./components/pages/registration/terms-pagination";
 import RegistrationAlternatives from "./components/pages/registration/alternatives";
 import RegistrationSignin from "./components/pages/registration/signin";
 import RegistrationInformation from "./components/pages/registration/information";
