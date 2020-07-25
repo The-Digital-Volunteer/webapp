@@ -3,9 +3,9 @@
   --helper-color: #68adec;
   --receiver-color: #ffb067;
   --link-color: #f7af69;
-  --req-color: #5CB85C;
-  --decline-color: #D9534F;
-  --hover-rating-color: #C0C0C0;
+  --req-color: #5cb85c;
+  --decline-color: #d9534f;
+  --hover-rating-color: #c0c0c0;
 }
 
 * {
@@ -13,14 +13,15 @@
 }
 
 body {
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
 
 .App {
   color: var(--font-color);
 }
 
-.App .text-box, #intro {
+.App .text-box,
+#intro {
   text-align: center;
 }
 
@@ -33,7 +34,9 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-style: normal;
   text-align: center;
   color: #06375b;
@@ -144,7 +147,7 @@ header .menuIcon {
 }
 
 #home #claim .claim-overlay {
-  background-image: url("../img/people-volunteer.png");
+  background-image: url('../img/people-volunteer.png');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;
@@ -221,7 +224,6 @@ header .menuIcon {
   margin-bottom: 25px;
 }
 
-
 /* PROGRESS */
 
 .page-link {
@@ -242,7 +244,6 @@ header .menuIcon {
 #page-wrapper p {
   margin-right: 10px;
 }
-
 
 /* MAP */
 
@@ -267,30 +268,25 @@ header .menuIcon {
 }
 
 .food {
-  background-image: url("../img/shopping.png");
+  background-image: url('../img/shopping.png');
 }
 
 .medicine {
-
 }
 
 .home {
-
 }
 
 .volunteer {
-
 }
 
 .transport {
-
 }
 
-#pins-wrapper h3{
+#pins-wrapper h3 {
   text-align: left;
   margin-left: 15px;
 }
-
 
 /* ENTER */
 
@@ -320,29 +316,28 @@ header .menuIcon {
   margin: 10px 0;
   height: 100px;
   width: auto;
-  border-radius:50%;
-  border-style:solid;
-  border-color:#68adef;
-
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #68adef;
 }
 
 #communication .communication_info {
   margin: 30px 0;
 }
 #communication .communication_info img {
-  display:block;
+  display: block;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   height: 100px;
   width: auto;
 }
-#communication .communication_info p{
-  text-align:center;
-  margin:25px;
+#communication .communication_info p {
+  text-align: center;
+  margin: 25px;
 }
-#req .req-actions .btn{
-  display:block;
-  width:100%;
+#req .req-actions .btn {
+  display: block;
+  width: 100%;
 }
 
 .rating {
@@ -356,11 +351,11 @@ header .menuIcon {
 }
 
 .rating > span.rating_selected:before {
-  content: '★' !IMPORTANT;
+  content: '★' !important;
 }
 
 .rating > span:hover:before,
-.rating   span:hover~span:before {
+.rating span:hover ~ span:before {
   background-color: var(--hover-rating-color);
 }
 
@@ -378,6 +373,109 @@ header .menuIcon {
 .decline-btn:active {
   background-color: var(--decline-color);
   border: 0;
+}
+
+.map-header {
+  position: absolute;
+  z-index: 10;
+}
+
+.marker-info-window {
+  position: fixed;
+  width: 500px;
+  height: 200px;
+  margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: pink;
+  margin: auto;
+  bottom: 0;
+}
+
+.marker-type-food {
+  background: var(--link-color);
+}
+.marker-type-travel {
+  background: #5fd680;
+}
+.marker-type-pharmacy {
+  background: #d65f5f;
+}
+.marker-type-other {
+  background: #68adec;
+}
+
+.fs-15 {
+  font-size: 15px;
+}
+
+.marker-info-window-container {
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.marker-info-window-container .content-container {
+  font-size: 14px;
+  line-height: 174%;
+  max-height: 200px;
+  overflow: scroll;
+  /* margin-bottom: 10px; */
+}
+
+.side-bar {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.8s ease;
+  box-shadow: 5px 0 5px -5px #333;
+}
+
+.toggle-menu {
+  height: 50px;
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 9rem;
+  width: 10px;
+  position: absolute;
+  outline: none;
+  z-index: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  color: #8c8c8c;
+}
+
+.content button {
+  border: none;
+  background: transparent;
+}
+.content button:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+.content button:active {
+  padding: 5px;
+  border: 1px solid red;
+}
+.custom-text {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.filter-item {
+  cursor: pointer;
 }
 
 .hero-header {
@@ -441,6 +539,12 @@ header .menuIcon {
 }
 
 @media screen and (max-width: 700px) {
+  .text-box .subtitle-right {
+    display: block;
+    position: initial !important;
+    margin: auto;
+    width: 100%;
+  }
   .hero-header.responsive {
     height: 100%;
     width: 0;
@@ -513,4 +617,81 @@ header .menuIcon {
     border: none;
     text-align: center;
   }
+}
+
+.text-box .title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+}
+
+.text-box .subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+}
+
+.text-box .subtitle-right {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+  text-decoration-line: underline;
+  position: absolute;
+  right: 50px;
+  color: black;
+}
+
+.map-header-right {
+  position: absolute;
+  right: 10px;
+  z-index: 10;
+  font-size: 30px;
+  backdrop-filter: blur(5px);
+}
+
+button.gm-ui-hover-effect {
+  background: url('../img/close.svg') !important;
+  background-size: contain !important;
+  border-radius: 50%;
+  border: 1px solid black !important;
+  top: 10px !important;
+  right: 0px !important;
+  margin: 5px !important;
+}
+
+button.gm-ui-hover-effect img {
+  display: none !important;
+}
+
+.time-slot {
+  border: 2px solid #5fd680;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: none;
+}
+
+.time-slot:hover {
+  background: #5fd680;
+}
+
+.time-slot:focus {
+  background: #5fd680;
+}
+
+.time-slot-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.response-textarea:placeholder-shown {
+  font-style: italic;
 }
