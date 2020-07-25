@@ -379,3 +379,138 @@ header .menuIcon {
   background-color: var(--decline-color);
   border: 0;
 }
+
+.hero-header {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  height: 90px;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  font-size: 100%;
+}
+
+.hero-header .toggle-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.hero-header li:last-child {
+  display: none;
+}
+
+.hero-header .profile-pic {
+  border-radius: 50%;
+}
+
+.hero-header li img {
+  margin-right: 2vw;
+}
+
+@media screen and (max-width: 1100px) {
+  .hero-header li {
+    font-size: 1.5vw;
+  }
+
+  .hero-header li img {
+    margin-right: 0.9vw;
+    width: 4vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .hero-header {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-header li:not(:first-child) {
+    display: none;
+  }
+
+  .hero-header .toggle-icon {
+    float: left;
+    display: block;
+    margin-left: 10px;
+  }
+  .hero-header {
+    justify-content: unset;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-header.responsive {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-header.responsive .toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    margin: 0px;
+    display: block;
+  }
+
+  .hero-header.responsive li {
+    float: none;
+    display: inline-flex;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #c4c4c4;
+    font-size: 0.8rem;
+    height: 100%;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-header.responsive li img {
+    width: 6vw;
+  }
+  .hero-header.responsive li:first-child img {
+    width: 4.5vw;
+    float: right;
+  }
+
+  .hero-header.responsive li:nth-child(2) {
+    text-align: center !important;
+    color: white;
+    background: #68adec;
+    margin: 0px !important;
+    font-size: 18px !important;
+    display: block;
+    width: 100%;
+  }
+
+  .hero-header.responsive li:nth-child(2) a {
+    color: white;
+  }
+
+  .hero-header.responsive li:nth-child(2) img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+  }
+
+  .hero-header.responsive img:not(:first-child) {
+    width: 30px;
+    margin-right: 3vw;
+  }
+  .hero-header.responsive li:last-child {
+    border: none;
+    text-align: center;
+  }
+}

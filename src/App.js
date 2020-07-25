@@ -2,7 +2,6 @@ import { Provider } from 'mobx-react'
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Navigation from "./components/navigation";
 import Home from "./components/pages/home";
 import Signin from "./components/pages/signin";
 import Welcome from "./components/pages/welcome";
@@ -36,39 +35,39 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./assets/css/App.css";
 import "./assets/css/media-queries.css";
+import LandingLayout from './components/layout/landingLayout';
 
 function App() {
   return (
     <div className="App">
       <Provider {...persistentStore}>
         <BrowserRouter>
-          <Navigation />
-          <Switch>
-            <Route path="/welcome" component={Welcome} />
-            <Route path="/signin" component={Signin} />
-            <Route path="/registration/terms" component={RegistrationTerms} />
-            <Route path="/registration/alternatives" component={RegistrationAlternatives} />
-            <Route path="/registration/signin" component={RegistrationSignin} />
-            <Route path="/registration/information" component={RegistrationInformation} />
-            <Route path="/registration/skills" component={RegistrationSkills} />
-            <Route path="/registration/finish" component={RegistrationFinish} />
-            <Route path="/request/helpType" component={RequestHelpType} />
-            <Route path="/request/thankYou" component={Thankyou} />
-            <Route path="/request/reqVolunteer" component={RequestVolunteer} />
-            <Route path="/request/receiverReq" component={ReceiverRequest} />
-            <Route path="/request/requestType" component={RequestType} />
-            <Route path="/request/requestType1" component={RequestType1} />
-            <Route path="/request/specify" component={RequestSpecify} />
-            <Route path="/request/confirmation" component={RequestConfirmation} />
-            <Route path="/request/volunteerMessage" component={VolunteerMessage} />
-            <Route path="/request/map" component={RequestMap} />
-            <Route path="/helper/map" component={HelperMap} />
-            <Route path="/ratings/pending" component={RatingsPending} />
-            <Route path="/ratings/rate" component={Rate} />
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+                <Switch>
+                  <Route path="/helper/map" component={HelperMap} />
+                  <Route path="/request/map" component={RequestMap} />
+                  <LandingLayout>
+                  <Route path="/welcome" component={Welcome} />
+                  <Route path="/signin" component={Signin} />
+                  <Route path="/registration/terms" component={RegistrationTerms} />
+                  <Route path="/registration/alternatives" component={RegistrationAlternatives} />
+                  <Route path="/registration/signin" component={RegistrationSignin} />
+                  <Route path="/registration/information" component={RegistrationInformation} />
+                  <Route path="/registration/skills" component={RegistrationSkills} />
+                  <Route path="/registration/finish" component={RegistrationFinish} />
+                  <Route path="/request/helpType" component={RequestHelpType} />
+                  <Route path="/request/thankYou" component={Thankyou} />
+                  <Route path="/request/reqVolunteer" component={RequestVolunteer} />
+                  <Route path="/request/receiverReq" component={ReceiverRequest} />
+                  <Route path="/request/requestType" component={RequestType} />
+                  <Route path="/request/requestType1" component={RequestType1} />
+                  <Route path="/request/specify" component={RequestSpecify} />
+                  <Route path="/request/confirmation" component={RequestConfirmation} />
+                  <Route path="/request/volunteerMessage" component={VolunteerMessage} />
+                  <Route path="/ratings/pending" component={RatingsPending} />
+                  <Route path="/ratings/rate" component={Rate} />
+                  <Route path="/" component={Home}/>
+              </LandingLayout>
+                </Switch>
         </BrowserRouter>
       </Provider>
     </div>
