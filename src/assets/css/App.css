@@ -96,15 +96,16 @@ header .menuIcon {
 .helper-btn:hover,
 .helper-btn:focus,
 .helper-btn:active {
-  background-color: var(--helper-color);
+  background-color: var(--link-color);
   border: 0;
 }
+
 
 .receiver-btn,
 .receiver-btn:hover,
 .receiver-btn:focus,
 .receiver-btn:active {
-  background-color: var(--receiver-color);
+  background-color: var(--decline-color);
   border: 0;
 }
 
@@ -379,6 +380,7 @@ header .menuIcon {
   background-color: var(--decline-color);
   border: 0;
 }
+
 .abc{
 	position: absolute;
 width: 259px;
@@ -477,7 +479,6 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 21px;
-
 color: #000000;
 }
 #vectorid{
@@ -493,13 +494,11 @@ width: 96px;
 height: 34px;
 left: 93px;
 top: 250px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 21px;
-
 color: #000000;
 }
 .line1{
@@ -508,8 +507,6 @@ width: 234px;
 height: 0px;
 left: 12px;
 top: 200px;
-
-
 border: 1px solid #C4C4C4;
 }
 .line2{
@@ -535,13 +532,11 @@ width: 96px;
 height: 34px;
 left: 93px;
 top: 340px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 21px;
-
 color: #000000;
 
 }
@@ -551,7 +546,6 @@ width: 259px;
 height: 91px;
 left: 0px;
 top: 520px;
-
 background: #FFB067;
 }
 #recid{
@@ -560,7 +554,6 @@ width: 38px;
 height: 39px;
 left: 33px;
 top: 547px;
-
 background: #FFFFFF;
 }
 #mytask{
@@ -569,7 +562,6 @@ width: 96px;
 height: 21px;
 left: 93px;
 top: 35px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: normal;
@@ -583,7 +575,6 @@ width: 1300px;
 height: 180px;
 left: 260px;
 top: 73px;
-
 background: #FFEA7B;
 }
 .webmenu{
@@ -599,14 +590,12 @@ width: 421.66px;
 height: 27.3px;
 left: 5px;
 top: 81.93px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #h{
@@ -629,7 +618,6 @@ width: 421.66px;
 height: 21.36px;
 left: 3px;
 top: 120px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
@@ -645,14 +633,12 @@ width: 421.66px;
 height: 31px;
 left: 250px;
 top: 120px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 36px;
 text-align: center;
-
 color: #000000;
 }
 #k{
@@ -661,14 +647,12 @@ width: 421.66px;
 height: 27.3px;
 left: 550.45px;
 top: 81.93px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 300;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #l{
@@ -755,14 +739,12 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top:50px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p1{
@@ -771,14 +753,12 @@ width: 98px;
 height: 30px;
 left: 400px;
 top: 50px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #r2{
@@ -787,14 +767,12 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top: 180px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p2{
@@ -803,14 +781,12 @@ width: 158px;
 height: 33px;
 left: 365px;
 top: 180px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #r3{
@@ -819,14 +795,34 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top: 315px;
+}
 
+/* food */
+
+.food1 {
+position: absolute;
+width: 191.23px;
+height: 177.72px;
+left: 850px;
+top: 203px;
+}
+
+
+/* Transport */
+
+.trans {
+position: absolute;
+width: 122px;
+height: 30px;
+left: 1100px;
+top: 226px;
+/* Main Heading - 18pt Bold */
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p3{
@@ -842,7 +838,6 @@ font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #r4{
@@ -851,14 +846,12 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top: 450px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p4{
@@ -867,14 +860,26 @@ width: 98px;
 height: 30px;
 left: 400px;
 top: 450px;
+letter-spacing: 0.01em;
+color: #000000;
+}
 
+/* Pharmacy */
+
+.med {
+position: absolute;
+width: 86.31px;
+height: 104.48px;
+left: 870.5px;
+top: 453.7px;
+
+/* Main Heading - 18pt Bold */
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #r5{
@@ -883,14 +888,12 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top: 580px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p5{
@@ -899,14 +902,12 @@ width: 98px;
 height: 30px;
 left: 400px;
 top: 580px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #r6{
@@ -915,14 +916,25 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top: 720px;
+letter-spacing: 0.01em;
+}
 
+/* Other */
+
+.other {
+position: absolute;
+left: 45.79%;
+right: 31.23%;
+top: 45.62%;
+bottom: 72.36%;
+
+/* Main Heading - 18pt Bold */
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p6{
@@ -931,14 +943,12 @@ width: 98px;
 height: 30px;
 left: 400px;
 top: 720px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #r7{
@@ -947,14 +957,12 @@ width: 158px;
 height: 33px;
 left: 150.58px;
 top: 860px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #p7{
@@ -963,14 +971,12 @@ width: 98px;
 height: 30px;
 left: 400px;
 top: 860px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 27px;
 text-align: center;
-
 color: #000000;
 }
 #pp1{
@@ -1214,16 +1220,13 @@ width: 146px;
 height: 23px;
 left: 2px;
 top: 130px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 300;
 font-size: 16px;
 line-height: 21px;
 text-align: center;
-
 color: #000000;
-
 }
 #app2{
 	position: absolute;
@@ -1231,14 +1234,12 @@ width: 146px;
 height: 23px;
 left: 134px;
 top: 130px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 300;
 font-size: 16px;
 line-height: 21px;
 text-align: center;
-
 color: #000000;
 }
 #app3{
@@ -1247,14 +1248,12 @@ width: 146px;
 height: 23px;
 left: 270px;
 top: 130px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 300;
 font-size: 16px;
 line-height: 21px;
 text-align: center;
-
 color: #000000;
 }
 #app4{
@@ -1263,14 +1262,12 @@ width: 94px;
 height: 18px;
 left: 30px;
 top: 175px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 24px;
 text-align: center;
-
 color: #000000;
 }
 #app5{
@@ -1279,14 +1276,12 @@ width: 94px;
 height: 46px;
 left: 175px;
 top: 175px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 text-align: center;
-
 color: #000000;
 }
 #app6{
@@ -1295,14 +1290,12 @@ width: 85px;
 height: 16px;
 left: 300px;
 top: 175px;
-
 font-family: Poppins;
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 24px;
 text-align: center;
-
 color: #000000;
 }
 #v1{
@@ -1584,4 +1577,7 @@ font-size: 18px;
 line-height: 27px;
 text-align: center;
 color: #000000;
+letter-spacing: 0.01em;
+color: #000000;
 }
+
