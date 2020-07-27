@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Progress from "./progress";
+import SplashScreen from "./splashScreen"
 
 class RegistrationTerms extends React.Component {
   pageId;
@@ -27,6 +28,7 @@ class RegistrationTerms extends React.Component {
 
     return (
       <div className="wrapper">
+        <SplashScreen/>
         <Progress current={current}/>
         <section id="registration_terms">
           <div className="text-box">
