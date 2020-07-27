@@ -97,7 +97,7 @@ export default class App extends Component {
                   <Route path="/request/volunteerMessage" component={VolunteerMessage} />
                   <Route path="/ratings/pending" component={RatingsPending} />
                   <Route path="/ratings/rate" component={Rate} />
-                  <Route path="/" component={Home}/>
+                  <Route exact path="/" component={Home}/>
               </LandingLayout>
                 </Switch>
         </BrowserRouter>
