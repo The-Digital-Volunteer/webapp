@@ -1,0 +1,94 @@
+/* NAVIGATION */
+
+#logo {
+    width: 140px;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-elem:hover {
+    color: var(--receiver-color);
+    font-weight: bold;
+}
+
+/* HERO SHOT */
+
+#hero {
+    display: flex;
+    align-items: center;
+    height: 55vh;
+    background-image: url("../img/the-digital-volunteer-key-visual.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 35px;
+}
+
+#hero-cta h1 {
+    font-size: 36px;
+}
+
+#vertical-separator {
+    width: 50vw;
+}
+
+/* ROADMAP */
+
+.wrapper h2 {
+    text-align: center;
+}
+
+.roadmap-feature-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.roadmap-feature {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 35px 0px 35px;
+}
+
+.roadmap-icon {
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+#footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--font-color);
+    height: 22vh;
+    padding: 20px 0px 20px 0px;
+}
+
+#footer div a,
+.footer-section {
+    color: white;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-list {
+    padding: 0px;
+    margin: 0px;
+}
