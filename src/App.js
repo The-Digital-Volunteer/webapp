@@ -36,17 +36,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/App.css";
 import "./assets/css/media-queries.css";
 import logo from "./assets/img/logo.png";
+
 import { UserSession } from 'blockstack';
 import { appConfig } from './constants';
 import { Connect } from '@blockstack/connect';
+import {saveProfile, fetchProfile} from './user-data'
+
+import { Redirect } from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import LandingLayout from './components/layout/landingLayout';
 
 const userSession = new UserSession({ appConfig });
 
+/* TODO: Put the navigation function to a separate module, like utils*/
 
-export default class App extends Component {
+class App extends Component {
   state = {
     userData: null,
+    userProfile: null,
+    redirect: null,
   };
 
   handleSignOut(e) {
@@ -56,25 +64,47 @@ export default class App extends Component {
   }
 
   render() {
+
     const { userData } = this.state;
     const authOptions = {
-      redirectTo: '/',
+      redirectTo: '/registration/alternatives',
       appDetails: {
         name: "Digital Volunteers",
         icon: window.location.origin + '/logo.png',
       },
       userSession,
       finished: ({ userSession }) => {
+        
         this.setState({ userData: userSession.loadUserData() });
         console.log(this.state.userData);
+        this.setState({userProfile: fetchProfile(userSession)});
+        //If the profile is not complete, send the user to complete the profile
+        if (this.userProfile===null){
+          /*redirects to complete the profile*/
+          /*TODO: Check if all relevant fields are saved in the userprofile*/
+          this.setState({ redirect: "/users" });
+         //this.setState({ redirect: "/users" });
+        }
+        else{
+          // Redirect to the application main board
+          //this.props.history.push("/help-request");
+          this.setState({ redirect: '/help-request' }); 
+
+        }
         
       },
     };
+
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
+    
     return (
       <Connect className="App" authOptions={authOptions}>
       <Provider {...persistentStore}>
         <BrowserRouter>
                 <Switch>
+                  
                   <Route path="/helper/map" component={HelperMap} />
                   <Route path="/request/map" component={RequestMap} />
                   <LandingLayout>
@@ -108,6 +138,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    
     if (userSession.isSignInPending()) {
       userSession.handlePendingSignIn().then(userData => {
         window.history.replaceState({}, document.title, '/');
@@ -118,3 +149,6 @@ export default class App extends Component {
     }
   }
 }
+
+
+export default withRouter(App);

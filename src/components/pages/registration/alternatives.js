@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Progress from "./progress";
+import { useConnect } from '@blockstack/connect';
+
 
 class RegistrationAlternatives extends React.Component {
   constructor( props ) {

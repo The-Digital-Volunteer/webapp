@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { PROFILE_FILENAME } from './constants';
+import { PROFILE_FILENAME } from '../constants';
 
 
 
@@ -23,12 +23,13 @@ import { PROFILE_FILENAME } from './constants';
  * 
  */
 
+
 // @type {UserProfile[]}
 export const defaultUserProfile = [
   {
-    firstname: 'Not set',
-    lastname: 'Not set',
-    email
+    firstname: 'Default',
+    lastname: 'Default',
+    email: 'Default'
 },
 ];
 
@@ -45,7 +46,10 @@ export const saveProfile = async (userSession, profile, isPublic) => {
 };
 
 /**
-
+ * Fetch the user profile. Omit the 'username' argument to fetch the current user profile [*testing*]
+ * 
+ * If the profile is not found, it returns null
+ * 
  * @param {import("blockstack").UserSession} userSession
  * @param {string} username
  * @returns {{ profile: Profile | null, public: boolean }}
@@ -75,7 +79,7 @@ export const fetchProfile = async (userSession, username) => {
       }
     } else {
       return {
-        profile: username ? null : defaultProfile,
+        profile: username ? null : defaultUserProfile,
         public: false,
       };
     }
@@ -86,7 +90,7 @@ export const fetchProfile = async (userSession, username) => {
       };
     } else {
       return {
-        profile: defaultProfile,
+        profile: null,
       };
     }
   }
