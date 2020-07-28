@@ -11,6 +11,7 @@ import Form from "react-bootstrap/Form";
 import Progress from "./progress";
 import { saveProfile } from "../../../user-data";
 import { appConfig } from "../../../constants";
+import { UserSession } from "blockstack";
 
 
 const userSession = new UserSession({ appConfig });
@@ -55,8 +56,8 @@ class RegistrationInformation extends React.Component {
   console.log(`${user.toString()} `);
   console.log(`${registration.toString()}`);
   
-  profile = {} /*Fill this with the user details from the form */
-  
+  const profile = {}; /*Fill this with the user details from the form */
+
   saveProfile(userSession, profile)
   
   //const response = await registration.register()
@@ -64,7 +65,7 @@ class RegistrationInformation extends React.Component {
   
   /*TODO: Redirect if saving userdata was successful */
   if( true ) {
-    this.props.history.push( '/registration/finish' )
+    this.props.history.push( '/registration/finish' );
   }
 }
 
