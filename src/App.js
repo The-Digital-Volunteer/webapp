@@ -42,7 +42,6 @@ import { appConfig } from './constants';
 import { Connect } from '@blockstack/connect';
 import {saveProfile, fetchProfile} from './user-data'
 
-import { Redirect } from "react-router-dom";
 import {withRouter} from "react-router-dom";
 import LandingLayout from './components/layout/landingLayout';
 
@@ -54,7 +53,6 @@ class App extends Component {
   state = {
     userData: null,
     userProfile: null,
-    redirect: null,
   };
 
   handleSignOut(e) {
@@ -75,30 +73,33 @@ class App extends Component {
       userSession,
       finished: ({ userSession }) => {
         
-        this.setState({ userData: userSession.loadUserData() });
-        console.log(this.state.userData);
-        this.setState({userProfile: fetchProfile(userSession)});
-        //If the profile is not complete, send the user to complete the profile
-        if (this.userProfile===null){
-          /*redirects to complete the profile*/
-          /*TODO: Check if all relevant fields are saved in the userprofile*/
-          this.setState({ redirect: "/users" });
-         //this.setState({ redirect: "/users" });
-        }
-        else{
-          // Redirect to the application main board
-          //this.props.history.push("/help-request");
-          this.setState({ redirect: '/help-request' }); 
-
-        }
+        const doFetchProfile = async () => {
         
-      },
-    };
+          this.setState({ userData: userSession.loadUserData() });
+        console.log(this.state.userData);
+        
+        const response = await fetchProfile(userSession);
 
-    if (this.state.redirect) {
-      return <Redirect to={this.state.redirect} />
-    }
-    
+        if (response.profile === null) {
+
+          //setNotFound(true);
+          this.props.history.push("/registration/alternatives" );
+         
+
+        } 
+        else {
+          this.setState({userProfile: (userSession)});
+          console.log("Userprofile found");
+          console.log("UserProfile: ", this.state.userProfile);
+          this.setState({ redirect: '/help-request' }); 
+        }
+        }
+
+        doFetchProfile();
+        
+        
+    },
+  };
     return (
       <Connect className="App" authOptions={authOptions}>
       <Provider {...persistentStore}>

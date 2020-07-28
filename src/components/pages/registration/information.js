@@ -4,8 +4,6 @@ import React from "react";
 
 import { withRouter } from 'react-router';
 
-
-
 import Button from "react-bootstrap/Button";
 
 import Form from "react-bootstrap/Form";
@@ -33,48 +31,35 @@ class RegistrationInformation extends React.Component {
   _onChange(event) {
 
     const { user } = this.props.registration;
-
     const { name, value } = event.target;
 
-
-
-    if( [ 'street', 'postalCode', 'city' ].includes(name) )
-
+    if( [ 'street', 'postalCode', 'city' ].includes(name) ){
       user.address[name] = value;
-
-    else
-
-      user[name] = value;
-
-  }
-
-
-
-  async _registerUser()
-
-  {
-
-    const { registration, user } = this.props
-	console.log("hello");
-
-
-    const response = await registration.register()
-
-	console.log(response);
-
-    if( response.token ) {
-
-      user.data = response
-
-	  
-
-	  console.log("hello");
-
-      this.props.history.push( '/registration/finish' )
-
     }
-
+    else{
+      user[name] = value;
+    }
   }
+
+
+
+  async _registerUser(){
+
+  const { registration, user } = this.props
+	console.log("Register user data in the blockstack db");
+
+  console.log(`${user.toString()} `);
+  console.log(`${registration.toString()}`);
+
+  
+  //const response = await registration.register()
+  
+  
+  /*TODO: Redirect if saving userdata was successful */
+  if( true ) {
+    this.props.history.push( '/registration/finish' )
+  }
+}
 
 
 
