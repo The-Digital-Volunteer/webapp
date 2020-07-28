@@ -14,6 +14,7 @@ import RegistrationInformation from "./components/pages/registration/information
 import RegistrationSkills from "./components/pages/registration/skills";
 import RegistrationFinish from "./components/pages/registration/finish";
 
+
 import Thankyou from "./components/pages/request/thankYou"
 import RequestVolunteer from "./components/pages/request/reqVolunteer"
 import ReceiverRequest from "./components/pages/request/receiverReq"
@@ -25,16 +26,13 @@ import RequestConfirmation from "./components/pages/request/confirmation"
 import VolunteerMessage from "./components/pages/request/volunteerMessage"
 import RequestMap from "./components/pages/request/map"
 
-import MedRequest from "./components/pages/request/medRequest"
-import FoodRequest from "./components/pages/request/foodRequest"
-import OthersRequest from "./components/pages/request/othersRequest"
-import LooperProfileWeb from "./components/pages/looper/looperprofileWeb"
-import LooperProfileApp from "./components/pages/looper/looperprofileApp"
+import MyProfile1 from "./components/pages/profile/myprofile1";
+import SomeoneProfile from "./components/pages/profile/someoneprofile";
+import SomeoneProfilePopup from "./components/pages/profile/someoneprofilepopup";
+import ProfileWeb from "./components/pages/profile/profileweb";
 
-import RequestDrivingTime from "./components/pages/request/requestDrivingPickupTime"
-import DeliveryPayment from "./components/pages/request/deliveryPayment"
 import HelperMap from "./components/pages/helper/map"
-import MyHeroApp from "./components/pages/ratings/myheroapp"
+
 import Rate from "./components/pages/ratings/rate"
 import RatingsPending from "./components/pages/ratings/pending"
 
@@ -70,17 +68,15 @@ function App() {
             <Route path="/request/confirmation" component={RequestConfirmation} />
             <Route path="/request/volunteerMessage" component={VolunteerMessage} />
             <Route path="/request/map" component={RequestMap} />
-			<Route path="/request/requestDrivingPickupTime" component={RequestDrivingTime} />
-			<Route path="/request/deliveryPayment" component={DeliveryPayment} />
+			
+			<Route path="/profile/myProfile1" component={MyProfile1} />
+			<Route path="/profile/someoneProfile" component={SomeoneProfile} />
+			<Route path="/profile/someoneProfilePopup" component={SomeoneProfilePopup} />
+			<Route path="/profile/profileWeb" component={ProfileWeb} />
+			
             <Route path="/helper/map" component={HelperMap} />
             <Route path="/ratings/pending" component={RatingsPending} />
             <Route path="/ratings/rate" component={Rate} />
-			<Route path="/ratings/myheroapp" component={MyHeroApp} />
-			<Route path="/request/othersRequest" component={OthersRequest} />
-			<Route path="/request/medRequest" component={MedRequest} />
-			<Route path="/request/foodRequest" component={FoodRequest} />
-			<Route path="/looper/looperprofileWeb" component={LooperProfileWeb} />
-			<Route path="/looper/looperprofileApp" component={LooperProfileApp} />
             <Route path="/">
               <Home />
             </Route>
