@@ -9,7 +9,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import Progress from "./progress";
+import { saveProfile } from "../../../user-data";
+import { appConfig } from "../../../constants";
 
+
+const userSession = new UserSession({ appConfig });
 
 
 class RegistrationInformation extends React.Component {
@@ -50,7 +54,10 @@ class RegistrationInformation extends React.Component {
 
   console.log(`${user.toString()} `);
   console.log(`${registration.toString()}`);
-
+  
+  profile = {} /*Fill this with the user details from the form */
+  
+  saveProfile(userSession, profile)
   
   //const response = await registration.register()
   
