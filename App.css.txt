@@ -1,0 +1,74 @@
+/* food */
+
+.food1 {
+position: absolute;
+width: 191.23px;
+height: 177.72px;
+left: 850px;
+top: 203px;
+}
+
+
+/* Transport */
+
+.trans {
+position: absolute;
+width: 122px;
+height: 30px;
+left: 1100px;
+top: 226px;
+
+/* Main Heading - 18pt Bold */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #000000;
+}
+
+/* Pharmacy */
+
+.med {
+position: absolute;
+width: 86.31px;
+height: 104.48px;
+left: 870.5px;
+top: 453.7px;
+
+/* Main Heading - 18pt Bold */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+letter-spacing: 0.01em;
+}
+
+/* Other */
+
+.other {
+position: absolute;
+left: 45.79%;
+right: 31.23%;
+top: 45.62%;
+bottom: 72.36%;
+
+/* Main Heading - 18pt Bold */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #000000;
+}
