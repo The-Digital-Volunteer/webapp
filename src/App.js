@@ -1,5 +1,5 @@
 import { Provider } from 'mobx-react'
-import React from "react";
+import React, {Component} from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./components/pages/home";
@@ -35,14 +35,77 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./assets/css/App.css";
 import "./assets/css/media-queries.css";
+import logo from "./assets/img/logo.png";
+
+import { UserSession } from 'blockstack';
+import { appConfig } from './constants';
+import { Connect } from '@blockstack/connect';
+import {saveProfile, fetchProfile} from './user-data'
+
+import {withRouter} from "react-router-dom";
 import LandingLayout from './components/layout/landingLayout';
 
-function App() {
-  return (
-    <div className="App">
+const userSession = new UserSession({ appConfig });
+
+/* TODO: Put the navigation function to a separate module, like utils*/
+
+class App extends Component {
+  state = {
+    userData: null,
+    userProfile: null,
+  };
+
+  handleSignOut(e) {
+    e.preventDefault();
+    this.setState({ userData: null });
+    userSession.signUserOut(window.location.origin);
+  }
+
+  render() {
+
+    const { userData } = this.state;
+    const authOptions = {
+      redirectTo: '/registration/alternatives',
+      appDetails: {
+        name: "Digital Volunteers",
+        icon: window.location.origin + '/logo.png',
+      },
+      userSession,
+      finished: ({ userSession }) => {
+        
+        const doFetchProfile = async () => {
+        
+          this.setState({ userData: userSession.loadUserData() });
+        console.log(this.state.userData);
+        
+        const response = await fetchProfile(userSession);
+
+        if (response.profile === null) {
+
+          //setNotFound(true);
+          this.props.history.push("/registration/alternatives" );
+         
+
+        } 
+        else {
+          this.setState({userProfile: (userSession)});
+          console.log("Userprofile found");
+          console.log("UserProfile: ", this.state.userProfile);
+          this.setState({ redirect: '/help-request' }); 
+        }
+        }
+
+        doFetchProfile();
+        
+        
+    },
+  };
+    return (
+      <Connect className="App" authOptions={authOptions}>
       <Provider {...persistentStore}>
         <BrowserRouter>
                 <Switch>
+                  
                   <Route path="/helper/map" component={HelperMap} />
                   <Route path="/request/map" component={RequestMap} />
                   <LandingLayout>
@@ -70,8 +133,23 @@ function App() {
                 </Switch>
         </BrowserRouter>
       </Provider>
-    </div>
-  );
+    </Connect>
+ 
+    );
+  }
+
+  componentDidMount() {
+    
+    if (userSession.isSignInPending()) {
+      userSession.handlePendingSignIn().then(userData => {
+        window.history.replaceState({}, document.title, '/');
+        this.setState({ userData: userData });
+      });
+    } else if (userSession.isUserSignedIn()) {
+      this.setState({ userData: userSession.loadUserData() });
+    }
+  }
 }
 
-export default App;
+
+export default withRouter(App);

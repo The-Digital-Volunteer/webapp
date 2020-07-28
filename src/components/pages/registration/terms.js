@@ -1,5 +1,5 @@
 import { inject, observer } from "mobx-react"
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Button from "react-bootstrap/Button";
@@ -7,12 +7,37 @@ import Form from "react-bootstrap/Form";
 import Progress from "./progress";
 import SplashScreen from "./splashScreen"
 
+import { UserSession } from 'blockstack';
+import { useConnect } from '@blockstack/connect';
+import {appConfig} from '../../../constants'
+
+const userSession = new UserSession({ appConfig });
+
+
+const BlockstackRegistration = (disabled) => {
+  //Consider using disable
+
+  const { doOpenAuth } = useConnect();
+
+  return(
+      <Button className="btn btn-block helper-btn"
+      onClick={() => {
+          console.log("Registration started")
+          doOpenAuth(true)
+        }}
+      >
+        Create My Account
+      </Button>
+  )
+}
+
 class RegistrationTerms extends React.Component {
   pageId;
 
   constructor( props ) {
     super( props )
     this.pageId = 1;
+    
     this.changeTermsOfServiceFlag = this.changeTermsOfServiceFlag.bind( this )
   }
 
@@ -63,13 +88,8 @@ class RegistrationTerms extends React.Component {
           </Form>
 
           <div className="mt-4">
-            <Link to="/registration/alternatives">
-              <Button className="btn btn-block helper-btn"
-                disabled={ !registration.termsOfServiceAccepted }
-              >
-                Create My Account
-              </Button>
-            </Link>
+            <BlockstackRegistration disabled={ !registration.termsOfServiceAccepted }/>
+            
           </div>
         </section>
       </div>
