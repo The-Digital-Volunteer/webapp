@@ -1,0 +1,104 @@
+.close
+{
+position: absolute;
+width: 24px;
+height: 24px;
+left: 900px;
+top: 60px;
+}
+.map
+{
+position: absolute;
+width: 32.81px;
+height: 48.88px;
+left: 650px;
+top: 65px;
+}
+.allowbtn
+{
+position: absolute;
+width: 100px;
+height: 50px;
+left: 800px;
+top: 200px;
+}
+.denybtn
+{
+position: absolute;
+width: 100px;
+height: 50px;
+left: 680px;
+top: 200px;
+}
+.allow
+{
+position: absolute;
+width: 200px;
+height: 10px;
+left: 680px;
+top: 190px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+}
+.snap
+{
+position: absolute;
+width: 41px;
+height: 48px;
+left: 1243px;
+top: 250px;
+}
+.insta
+{
+position: absolute;
+width: 40px;
+height: 48px;
+left: 1244px;
+top: 350px;
+}
+.fb
+{
+position: absolute;
+left: 1244px;
+right: 48px;
+top: 450px;
+bottom: ;
+}
+.twitter
+{
+position: absolute;
+left: 1244px;
+right: 48px;
+top: 550px;
+bottom: ;
+}
+.taskbtn
+{
+position: absolute;
+width: 400px;
+height: 49px;
+left: 700px;
+top: 772px;
+}
+.taskbtn2
+{
+position: absolute;
+width: 239px;
+height: 49px;
+left: 650px;
+top: 600px;
+}
+
+
+
+
+
+
+
+
+

@@ -14,7 +14,6 @@ import RegistrationInformation from "./components/pages/registration/information
 import RegistrationSkills from "./components/pages/registration/skills";
 import RegistrationFinish from "./components/pages/registration/finish";
 
-
 import Thankyou from "./components/pages/request/thankYou"
 import RequestVolunteer from "./components/pages/request/reqVolunteer"
 import ReceiverRequest from "./components/pages/request/receiverReq"
@@ -26,15 +25,19 @@ import RequestConfirmation from "./components/pages/request/confirmation"
 import VolunteerMessage from "./components/pages/request/volunteerMessage"
 import RequestMap from "./components/pages/request/map"
 
-import MyProfile1 from "./components/pages/profile/myprofile1";
-import SomeoneProfile from "./components/pages/profile/someoneprofile";
-import SomeoneProfilePopup from "./components/pages/profile/someoneprofilepopup";
-import ProfileWeb from "./components/pages/profile/profileweb";
-
 import HelperMap from "./components/pages/helper/map"
 
 import Rate from "./components/pages/ratings/rate"
 import RatingsPending from "./components/pages/ratings/pending"
+import MyHeroWeb from "./components/pages/ratings/myheroweb" 
+import MyHeroLog from "./components/pages/ratings/herolog"
+import HeroRating from "./components/pages/ratings/herorating"
+import Amsterdam from "./components/pages/ratings/amsterdam"
+import HeroRating2 from "./components/pages/ratings/herorating2"
+import MyHeroLogApp from "./components/pages/ratings/herologapp"
+import SocialShare from "./components/pages/ratings/socialshare"
+import LocationDoodle from "./components/pages/helper/mapdoodle"
+import MapPopup from "./components/pages/helper/mappopup"
 
 import persistentStore from './stores/PersistentStore'
 
@@ -68,15 +71,18 @@ function App() {
             <Route path="/request/confirmation" component={RequestConfirmation} />
             <Route path="/request/volunteerMessage" component={VolunteerMessage} />
             <Route path="/request/map" component={RequestMap} />
-			
-			<Route path="/profile/myProfile1" component={MyProfile1} />
-			<Route path="/profile/someoneProfile" component={SomeoneProfile} />
-			<Route path="/profile/someoneProfilePopup" component={SomeoneProfilePopup} />
-			<Route path="/profile/profileWeb" component={ProfileWeb} />
-			
             <Route path="/helper/map" component={HelperMap} />
             <Route path="/ratings/pending" component={RatingsPending} />
             <Route path="/ratings/rate" component={Rate} />
+			<Route path="/ratings/myheroweb" component={MyHeroWeb} />
+			<Route path="/ratings/herolog" component={MyHeroLog} />
+			<Route path="/ratings/herorating" component={HeroRating} />
+			<Route path="/ratings/amsterdam" component={Amsterdam} />
+			<Route path="/ratings/herorating2" component={HeroRating2} />
+			<Route path="/ratings/herologapp" component={MyHeroLogApp} />
+			<Route path="/ratings/socialshare" component={SocialShare} />
+			<Route path="/helper/mapdoodle" component={LocationDoodle} />
+			<Route path="/helper/mappopup" component={MapPopup} />
             <Route path="/">
               <Home />
             </Route>
