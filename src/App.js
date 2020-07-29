@@ -84,11 +84,13 @@ class App extends Component {
 
           //setNotFound(true);
           this.props.history.push("/registration/alternatives" );
-         
+          console.log(`ProfileJSON response --> ${response.profileJSON}`);
+          console.log(`ProfileJSON content --> ${response.json}`);
+          //window.location.reload ();
 
         } 
         else {
-          this.setState({userProfile: (userSession)});
+          this.setState({userProfile: response.profile});
           console.log("Userprofile found");
           console.log("UserProfile: ", this.state.userProfile);
           this.setState({ redirect: '/help-request' }); 
