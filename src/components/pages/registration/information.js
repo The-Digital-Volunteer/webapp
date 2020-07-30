@@ -38,6 +38,7 @@ class RegistrationInformation extends React.Component {
     else{
       user[name] = value;
     }
+
   }
 
 
@@ -60,23 +61,16 @@ class RegistrationInformation extends React.Component {
   render() {
 
     const { registration } = this.props;
-    
     const { message, user } = registration;
-
     const {
-
       firstName, lastName, phone, email, address
-
     } = user;
-
     const { street, postalCode, city } = address
-
     const current = 4;
 
     return (
 
       <div className="wrapper">
-
         <Progress current={current}/>
         <section id="registration_information">
           <div className="text-box">
@@ -88,34 +82,34 @@ class RegistrationInformation extends React.Component {
             { message }
           </div>
 
-          <Form>
+          <Form.Group>
+            <Form.Label>What's your First name ?</Form.Label>
+            <Form.Control type="text" size="lg" name="firstName" placeholder="Jane"
+              onChange={ this._onChange }
+              value={ firstName }/>
+          </Form.Group>
 
-            <Form.Group>
+          <Form.Group>
 
-              <Form.Label>What's your First name ?</Form.Label>
-
-              <Form.Control type="text" size="lg" name="firstName" placeholder="Jane"
-                onChange={ this._onChange }
-                value={ firstName }/>
-
-            </Form.Group>
-
-            <Form.Group>
-
-              <Form.Label>What's your Last name ?</Form.Label>              
-              <Form.Control type="text" size="lg" name="lastName" placeholder="Green"
-                onChange={ this._onChange }
-                value={ lastName }
-              />
-            </Form.Group>
+            <Form.Label>What's your Last name ?</Form.Label>              
+            <Form.Control type="text" size="lg" name="lastName" placeholder="Green"
+              onChange={ this._onChange }
+              value={ lastName }
+            />
+          </Form.Group>
             <Form.Group>
               <Form.Label>What's your Phone number ?</Form.Label>
               <Form.Control type="text" size="lg" name="phone" placeholder="656-656-5656"
                 onChange={ this._onChange }
                 value={ phone }/>
             </Form.Group>
-          </Form>
 
+            <Form.Group>
+              <Form.Label>What's your Email?</Form.Label>
+              <Form.Control type="text"  size="lg" name="email" placeholder="Enter your Email"
+                onChange={ this._onChange }/>
+            </Form.Group>
+         
           <div className="mt-4">
             <Button className="btn btn-block helper-btn"
               disabled={ false /* TODO: enable only when information is complete */ }

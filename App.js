@@ -9,7 +9,6 @@ import Welcome from "./components/pages/welcome";
 
 import RegistrationTerms from "./components/pages/registration/terms";
 import RegistrationAlternatives from "./components/pages/registration/alternatives";
-import RegistrationSignin from "./components/pages/registration/signin";
 import RegistrationInformation from "./components/pages/registration/information";
 import RegistrationSkills from "./components/pages/registration/skills";
 import RegistrationFinish from "./components/pages/registration/finish";
@@ -54,7 +53,6 @@ function App() {
             <Route path="/signin" component={Signin} />
             <Route path="/registration/terms" component={RegistrationTerms} />
             <Route path="/registration/alternatives" component={RegistrationAlternatives} />
-            <Route path="/registration/signin" component={RegistrationSignin} />
             <Route path="/registration/information" component={RegistrationInformation} />
             <Route path="/registration/skills" component={RegistrationSkills} />
             <Route path="/registration/finish" component={RegistrationFinish} />
