@@ -12,12 +12,22 @@ By bringing all personas together in a socially impacting platform, we target co
 ## Our solution
 The HeroLoop platform is social inclusive, focusing on the bigger picture through the little details. User activities are protected by blockchain, AI/ML and IBM technologies that analyze every incoming text, call or voicenote to ensure users’ privacy and safety at all times. 
 
-This is the future of community help, and we have IBM tools to thank for it: Watson Tone Analyser, Watson Personality insights {Github}, {name….. List all}  have all assisted in bringing The HeroLoop to life and maintain its existence.
+This is the future of community help, and we have IBM tools to thank for it - all assisted in bringing TheHeroLoop to life and maintain its existence.
 
+IBM Cloud</br>
+ - Watson Tone Analyser
+ - Watson Personality insights 
+ - Watson Assistant
+ - Object Storage
+ - The Weather Company
+ - Node-Red </br>
+ and 
+ - Red Hat OpenShift
+   
 ## Demo video
 
 [![TheHeroLoopVideo](http://loopdigital.se/images/IBM-image-YouTube.png)](http://www.youtube.com/watch?v=iGajZwkXlKk&feature=youtu.be "TheHeroLoop")
-
+Please click on the image to view the video.
 
 ## Architecture Overview
 ![TheHeroLoopArchitecture](http://loopdigital.se/images/HeroLoopArchitecture.png)
@@ -34,10 +44,11 @@ Our leaderboard is designed to incentive the Heroes, and the worthy cause is pac
 We are building the product using as much open source and decentralisation as possible, and focusing on security and scalability so the application can be used anywhere and by anyone. We at the HeroLoop recognize that technology must adapt to human needs, and for it to be a real game changer, it must be accessible to all.
 Universal functionalities are: 
 
-Enter a request by non-smartphone off grid or smartphone with internet 
-The individual identity holder controls their own credentials and choses what personal data to share. Login is with privacy encrypted keys in the ethereum blockchain, and each user is protected by a hash
-Toxic use is filtered with AI/ML and IBM Watson
-Matching is done by AI within 20 km radius of real-time location
+- Enter a request by non-smartphone off grid or smartphone with internet 
+- The individual identity holder controls their own credentials and choses what personal data to share. 
+- Login is with privacy encrypted keys in the ethereum blockchain, and each user is protected by a hash
+- Toxic use is filtered with AI/ML and IBM Watson
+- Matching is done by AI within 20 km radius of real-time location
 
 This to enable safe and democratic use of different public and private sectors in the service. Meanwhile for this MVP we will start with decentralized login. 
 Decentralized login enables the user to choose what data to share. TheHeroLoop will automate removing toxic use with a strong border on separating centralized data with decentralized data.
@@ -59,9 +70,8 @@ Another layer of security is TheHeroLoop never exposes the recipient’s public/
 ![TheHeroLoopLogo](https://docs.blockstack.org/storage/images/app-sign-in.png) 
 The platform verifies requests with the associated key using the token hash algorithm from Blockstack. It’s only the hash key that passes within the centralised data.
 
-The AI/ML filter detects toxic messages from chats or Speech modules from the app, where the model alerts the developer if there is any bad use of the application. Latest natural language techniques such as NLTK libraries for preprocessing, the TFiDF vectorizer for feature extraction are used along with extreme boosting models for binary classification. The model is trained on CPUs and 16GB RAM. The best auc_score is 88%.
-
 The landline functionality enables Loopers to call in and leave a voicenote requesting help from a Hero. This note is transcribed with speech to text and AI/ML models are applied. A pin is created and placed on the map with a need for a Hero  within a radius of 20 km area. The area the Looper stated in the voicenote. 
+
 The AI/ML filter detects toxic messages from input fields, notifications, chats or Speech modules from the app where the model alerts the developer if there is any bad use of the application. Latest natural language techniques such as NLTK libraries for preprocessing, the TFiDF vectorizer for feature extraction are used along with extreme boosting models for binary classification. The model is trained on CPUs and 16GB RAM. The best auc_score is 88%.
 
 We built a custom chatbot using IBM Watson Assistant tool to answer generic questions asked by the users.
@@ -170,8 +180,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Running the tests
-Explain how to run the automated tests for this system
-Suneetha needs to look into the unit tests and explain here
+Automated unit tests are run for this platform to ensure that sections of the application meets its design and behaves as intended.
 
 ### Live demo
 You can already join TheHeroLoop at: www.thedigitalvolunteer.se (Soon to be  www.TheHeroLoop.com after Call for Code submission).
@@ -214,23 +223,23 @@ Idea The Digital Volunteer / TheHeroLoop </br>
 PO/PM</br>
 Founder & CEO Loopdigital</br>
 bente.acking@loopdigital.se</br>
-</br></br>
+</br>
 ##### Suneetha Jonnadula
 OpenShift CI/CD</br>
 Full stack developer</br>
 suneetha.jonnadula@gmail.com</br>
-</br></br>
+</br>
 ##### Ruthy Lichtenstein
 UX/UI Design</br>
 ruthy.licht@gmail.com</br>
-</br></br>
+</br>
 ##### Emmanuel Murairi
 Blockstack and React/Node.js</br>
 emurairi18@alastudents.org</br>
-</br></br>
+</br>
 ##### Keerti Bhogaradju
 AI/ML</br>
 bhogaraju.keerti17@gmail.com</br>
-</br></br>
+</br>
 
 
