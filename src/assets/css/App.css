@@ -65,9 +65,38 @@ h3 {
   padding: 20px;
 }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.overlay {
+  background: rgb(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.overlay-close-btn {
+  float: right;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.overlay-close-btn:hover {
+  filter: invert(1);
+  transition: filter 0.3s;
+}
+
 .text-box {
   width: 80%;
   margin: 0 auto;
+  align: center;
 }
 
 header {
@@ -322,15 +351,17 @@ header .menuIcon {
 }
 
 #communication .communication_info {
-  margin: 30px 0;
+  margin: 40px 0;
 }
 #communication .communication_info img {
+  align: center-right;
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 100px;
   width: auto;
 }
+
 #communication .communication_info p {
   text-align: center;
   margin: 25px;
@@ -423,7 +454,9 @@ header .menuIcon {
   /* margin-bottom: 10px; */
 }
 
-.marker-info-window-container .content-container .step-2-content {
+.marker-info-window-container
+  .content-container
+  .step-2-content {
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -432,7 +465,9 @@ header .menuIcon {
   padding: 10px;
 }
 
-.marker-info-window-container .content-container .step-3-content {
+.marker-info-window-container
+  .content-container
+  .step-3-content {
   border: 2px solid #5fd680;
   border-radius: 5px;
   padding: 5px;
@@ -637,11 +672,13 @@ header .menuIcon {
     min-width: 250px;
   }
 
-  .marker-info-window-container .h4{
+  .marker-info-window-container .h4 {
     font-size: 1rem;
   }
 
-  .marker-info-window-container .content-container .step-2-content{
+  .marker-info-window-container
+    .content-container
+    .step-2-content {
     font-size: unset;
   }
 
@@ -735,4 +772,95 @@ button.gm-ui-hover-effect img {
 .gm-style-iw-d {
   overflow: hidden !important;
   padding-right: 12px;
+}
+/* Request*/
+#img1 {
+  position: absolute;
+  width: 111px;
+  height: 111px;
+  left: 341px;
+  top: 102px;
+}
+
+#t1 {
+  text-align: center;
+  width: 120px;
+  height: 70px;
+
+  background: #ececec;
+}
+#img2 {
+  position: absolute;
+  left: 49.63%;
+  right: 34.81%;
+  top: 13.73%;
+  bottom: 68.02%;
+}
+#img3 {
+  position: absolute;
+  left: 69.63%;
+  right: 14.81%;
+  top: 13.73%;
+  bottom: 68.02%;
+}
+#t3 {
+  position: absolute;
+  left: 50.37%;
+  right: 35.56%;
+  top: 33.7%;
+  bottom: 62.71%;
+}
+#t4 {
+  position: absolute;
+  left: 69.63%;
+  right: 14.69%;
+  top: 33.7%;
+  bottom: 62.71%;
+}
+#img4 {
+  position: absolute;
+  left: 45.06%;
+  right: 41.73%;
+  top: 46.49%;
+  bottom: 37.6%;
+}
+#img5 {
+  position: absolute;
+  left: 60.74%;
+  right: 25.68%;
+  top: 46.49%;
+  bottom: 37.6%;
+}
+
+#img6 {
+  position: absolute;
+  left: 77.04%;
+  right: 9.38%;
+  top: 46.49%;
+  bottom: 37.6%;
+}
+h5 {
+  font-weight: bold;
+}
+
+#i2 {
+  position: absolute;
+  left: 63.46%;
+  right: 31.95%;
+  top: 14.2%;
+  bottom: 78.91%;
+}
+#i3 {
+  position: absolute;
+  left: 79.99%;
+  right: 15.42%;
+  top: 14.05%;
+  bottom: 79.05%;
+}
+#i4 {
+  position: absolute;
+  left: 71.98%;
+  right: 23.43%;
+  top: 14.04%;
+  bottom: 79.06%;
 }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/img/logo.png";
 import handsColorReceiver from "../../assets/img/hands_orange.svg";
+import { useConnect } from '@blockstack/connect';
 
 import Button from "react-bootstrap/Button";
 
@@ -29,7 +30,7 @@ class Welcome extends React.Component {
             </Link>
           </div>
 
-          <Link to="/signin">
+          <Link onClick={() => this.props.doOpenAuth(true)}>
             Already have an account? Click here to sign in
           </Link>
         </section>
@@ -38,4 +39,11 @@ class Welcome extends React.Component {
   }
 }
 
-export default Welcome;
+
+export default () => {
+  const { doOpenAuth } = useConnect();
+
+  return (
+      <Welcome doOpenAuth={doOpenAuth}/>
+  )
+}

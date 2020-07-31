@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Progress from "./progress";
+import { useConnect } from '@blockstack/connect';
+
 
 class RegistrationAlternatives extends React.Component {
   constructor( props ) {
@@ -53,7 +55,7 @@ class RegistrationAlternatives extends React.Component {
           </Form>
 
           <div className="mt-4">
-            <Link to="/registration/signin">
+            <Link to="/registration/information">
               <Button className="btn btn-block helper-btn" disabled={ !role }>
                 Sign Up
               </Button>
