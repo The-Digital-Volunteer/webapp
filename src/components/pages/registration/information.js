@@ -87,7 +87,7 @@ class RegistrationInformation extends React.Component {
 
     const { street, postalCode, city } = address
 
-    const current = 4;
+    const current = 3;
 
 
 

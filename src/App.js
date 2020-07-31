@@ -100,10 +100,10 @@ class App extends Component {
 
     const { userData } = this.state;
     const authOptions = {
-      redirectTo: '/registration/alternatives',
+      redirectTo: 'registration/alternatives',
       appDetails: {
         name: "Digital Volunteers",
-        icon: window.location.origin + '/logo.png',
+        icon: window.location.origin + '/logo.64bba70f.png',
       },
       userSession,
       finished: ({ userSession }) => {
@@ -117,7 +117,7 @@ class App extends Component {
 
         if (response.profile === null) {
 
-          this.props.history.push("/registration/information" );
+          this.props.history.push("registration/alternatives" );
           window.location.reload();
          
 

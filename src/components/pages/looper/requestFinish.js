@@ -8,7 +8,7 @@ import check from "../../../assets/img/green-check.png";
 
 class RequestFinish extends React.Component {
   render() {
-    const current = 6;
+    const current = 5;
 
     return (
       <div className="wrapper">
