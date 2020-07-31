@@ -7,7 +7,7 @@ import Progress from "./progress";
 
 class RegistrationFinish extends React.Component {
   render() {
-    const current = 6;
+    const current = 5;
 
     return (
       <div className="wrapper">

@@ -81,23 +81,22 @@ class App extends Component {
 
         if (response.profile === null) {
 
-          //setNotFound(true);
           this.props.history.push("/registration/alternatives" );
-          console.log(`ProfileJSON response --> ${response.profileJSON}`);
-          console.log(`ProfileJSON content --> ${response.json}`);
-          //window.location.reload ();
+          //console.log(`ProfileJSON response --> ${response.profileJSON}`);
+          //console.log(`ProfileJSON content --> ${response.json}`);
+          window.location.reload ();
 
         } 
         else {
           this.setState({userProfile: response.profile});
-          console.log("Userprofile found");
-          console.log("UserProfile: ", this.state.userProfile);
-          this.setState({ redirect: '/help-request' }); 
+          //console.log("UserProfile: ", this.state.userProfile);
+          this.props.history.push("/helper/map" );
+          window.location.reload();
+
         }
         }
 
-        doFetchProfile();
-        
+        doFetchProfile();     
         
     },
   };
