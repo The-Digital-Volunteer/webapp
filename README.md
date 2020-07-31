@@ -77,6 +77,7 @@ To solve in-app chat Apache Kafka is used as the messaging system. It provides a
 
 In the future more functionality enabled by Kafka will be used in the webapp. 
 
+![TheHeroLoopLogo](http://loopdigital.se/images/Roadmap.jpg) 
 
 ## Project roadmap
 What's next for TheHeroLoop. 
