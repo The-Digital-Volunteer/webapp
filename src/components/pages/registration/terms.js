@@ -8,15 +8,17 @@ import SplashScreen from "./splashScreen" ;
 import { UserSession } from 'blockstack';
 import { useConnect } from '@blockstack/connect';
 import { appConfig } from '../../../constants';
+
 const userSession = new UserSession({ appConfig });
+
 const BlockstackRegistration = (disabled) => {
-  //Consider using disable  
+
   const { doOpenAuth } = useConnect();  
   return (
     <Button className="btn btn-block helper-btn"
       onClick={() => {
         console.log("Registration started")
-        doOpenAuth(true)
+        doOpenAuth()
       }}
     >
       Create My Account

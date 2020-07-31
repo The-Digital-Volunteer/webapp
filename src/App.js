@@ -117,16 +117,15 @@ class App extends Component {
 
         if (response.profile === null) {
 
-          //setNotFound(true);
           this.props.history.push("/registration/information" );
+          window.location.reload();
          
 
         } 
         else {
           this.setState({userProfile: (userSession)});
-          console.log("Userprofile found");
-          console.log("UserProfile: ", this.state.userProfile);
-          this.setState({ redirect: '/help-request' }); 
+          this.props.history.push("/helper/map" );
+          window.location.reload();
         }
         }
 

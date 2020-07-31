@@ -153,6 +153,15 @@ class RegistrationInformation extends React.Component {
             </Form.Group>
 
             <Form.Group>
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="text"  size="lg" name="email" placeholder="Enter your Email"
+               onChange={ this._onChange }
+
+               value={ email }
+               />
+            </Form.Group>
+
+            <Form.Group>
 
               <Form.Label>What's your Phone number ?</Form.Label>
 
