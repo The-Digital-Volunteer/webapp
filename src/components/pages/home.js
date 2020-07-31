@@ -21,8 +21,16 @@ class Home extends React.Component {
             <div id="hero-cta">
               <h1>Help has arrived!</h1>
               <p>
-                The digital volunteer helps connecting volunteers with people in need.<br/>
-                Digital, fast and convenient.
+                
+COVID-19 has disrupted billions of lives and endangered the global economy, 
+<br/>creating an unprecedented human crisis. TheHeroLoop is a socio-economic <br/>
+recovery and response ecosystem to COVID-19, to support countries’paths to <br/>social  
+and economic recovery. Worldwide.
+<br/><br/>
+Millions of people are isolated within their homes, unable to shop for food, pickup
+<br/> up medications, or travel to doctorappointments. TheHeroLoop hopes to solve <br/>
+that problem by connecting Loopers with Heros in local communities to help each other.
+
               </p>
               <Button href="#claim" className="helper-btn">Learn more</Button>
             </div>
@@ -30,9 +38,9 @@ class Home extends React.Component {
           <div id="claim">
             <div className="claim-overlay"></div>
             <div className="wrapper">
-              <h1>The digital volunteer helper</h1>
+              <h1>TheHeroLoop</h1>
               <p>
-                Volunteer is a tool that connects volunteers with people who need
+                HeroLoop is a tool that connects volunteers with people who need
                 help with getting food, medication and similar tasks. Click on
                 whether you want to help or be helped
               </p>
@@ -54,43 +62,43 @@ class Home extends React.Component {
           </div>
 
           <div className="wrapper">
-            <h1>What is the digital volunteer?</h1>
+            <h1>What is TheHeroLoop?</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              porttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitae
-              massa vulputate, auctor metus seLorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Ut porttitor facilisis massa vel
-              maximus. Nulla facilisi.{" "}
+              TheHeroLoop is a digital ecosystem that connects Heros with people in need of help - Loopers, 
+			                      with getting food, picking up medications, transportation, and other tasks.
             </p>
             <div className="separator"></div>
           </div>
 
           <div id="home-info">
             <div className="wrapper">
-              <h1>How does the digital volunteer work?</h1>
+              <h1>How does TheHeroLoop work?</h1>
               <div className="home-feature-list">
                 <div className="home-feature">
                   <img alt="" src={personHeart} />
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    porttitor facilisis massa vel maximus. Nulla facilisi. Aenean
-                    vitae{" "}
+                    Ask For Help<br/>
+					The Looper sends a request for help to Hero’s 
+					within a 20 km radius in your area.
+
                   </p>
                 </div>
                 <div className="home-feature">
                   <img alt="" src={handHeart} />
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    porttitor facilisis massa vel maximus. Nulla facilisi. Aenean
-                    vitae{" "}
+                    Provide Help<br/>
+					Local Hero’s review and accept the requests 
+					they can help with.
+
                   </p>
                 </div>
                 <div className="home-feature">
                   <img alt="" src={lockHeart} />
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    porttitor facilisis massa vel maximus. Nulla facilisi. Aenean
-                    vitae{" "}
+                    Digital Security<br/>
+					Your personal information is protected by 
+					blockchain encryption.
+
                   </p>
                 </div>
               </div>
@@ -104,25 +112,33 @@ class Home extends React.Component {
                 <div className="roadmap-feature">
                   <img alt ="" className="roadmap-icon" src={chat}/>
                   <h5>Milestone</h5>
-                  <h6 className="roadmap-date" >01.01.2020</h6>
+                  <h6 className="roadmap-date" >
+					AI/ML NLTK libraries forfiltering toxic use is now implemented
+					30 July 2020
+				  </h6>
                   <div className="separator"></div>
                 </div>
                 <div className="roadmap-feature">
                   <img alt ="" className="roadmap-icon" src={chat}/>
                   <h5>Milestone</h5>
-                  <h6 className="roadmap-date" >02.01.2020</h6>
+                  <h6 className="roadmap-date" >Landline voicenotes are now converted to requests on the map
+					27 July 2020</h6>
                   <div className="separator"></div>
                 </div>
                 <div className="roadmap-feature">
                   <img alt ="" className="roadmap-icon" src={chat}/>
                   <h5>Milestone</h5>
-                  <h6 className="roadmap-date" >03.01.2020</h6>
+                  <h6 className="roadmap-date" >Encrypted DID login generating a hash id by Blockstack 
+					25 July 2020</h6>
                   <div className="separator"></div>
                 </div>
                 <div  className="roadmap-feature">
                   <img alt ="" className="roadmap-icon" src={chat}/>
                   <h5>Milestone</h5>
-                  <h6 className="roadmap-date" >04.01.2020</h6>
+                  <h6 className="roadmap-date" >
+						Looper requests are now showing on the Hero map  
+						20 July 2020
+				   </h6>
                   <div className="separator"></div>
                 </div>
               </div>

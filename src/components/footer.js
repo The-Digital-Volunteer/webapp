@@ -14,9 +14,9 @@ class LandingNav extends React.Component {
             <Navbar id="footer" sticky="bottom">
                 <div className="footer-section">
                     <h5>Social Media</h5>
-                    <a href="https://www.facebook.com/thedigitalvolunteer/">Facebook</a>
-                    <a href="https://www.instagram.com/thedigitalvolunteer/">Instagram</a>
-                    <a href="https://www.linkedin.com/in/loopdigital/">Linkedin</a>
+                    <a href="https://www.facebook.com/The-Hero-Loop-106640024465344/">Facebook</a>
+                    <a href="https://www.instagram.com/theheroloop/">Instagram</a>
+                    <a href="https://www.linkedin.com/in/the-hero-loop-2400101b4/">Linkedin</a>
                 </div>
             </Navbar>
         );

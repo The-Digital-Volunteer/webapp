@@ -25,7 +25,7 @@ class Welcome extends React.Component {
           <div>
             <Link to="/registration/terms">
               <Button className="btn btn-block helper-btn">
-                Start creating your account
+                Join The Loop
               </Button>
             </Link>
           </div>

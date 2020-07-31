@@ -1,0 +1,742 @@
+.menu-nav{
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    left: 20px;
+    top: 30px;
+  }
+  
+  .profile-bg-availability{
+    position: absolute;
+  width: 414px;
+  height: 157px;
+  left: -1px;
+  top: 0px;
+  
+  background: #68ADEC;
+  }
+  
+  .my-availability{
+    position: absolute;
+  width: 194px;
+  height: 19px;
+  left: 120px;
+  top: 53px;
+  bottom: 23px;
+  right: 100px;
+  text-align: center;
+  justify-content: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  
+  color: #FFFFFF;
+  
+  
+  }
+  
+  .h4-availability{
+    position: absolute;
+    left: 81px;
+    top: 95px;
+    bottom: 17px;
+    right: 57px;
+    /* Button font - 16pt Semi Bold */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    
+    color: #FFFFFF;
+    
+    
+  }
+  
+  .weekdays{
+    position: absolute;
+  width: 148px;
+  height: 53px;
+  left: 51px;
+  top: 174px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0;
+  }
+  
+  
+  
+  #id-days{
+   background-color: #ECECEC;
+  /* Button font - 16pt Semi Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color: #000000;
+  
+  }
+  
+  #days-selected{
+    background-color: #5FD680;
+  /* Button font - 16pt Semi Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color: #FFFFFF;
+  
+  }
+  
+  .weekends{
+    position: absolute;
+  width: 148px;
+  height: 53px;
+  left: 218px;
+  top: 174px;
+  border: 0;
+  
+  border-radius: 5px;
+  }
+  
+  
+  #id-ends{
+    background:  #ECECEC;
+  /* Button font - 16pt Semi Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color:#000000;
+  
+  }
+  
+  #ends-selected{
+    background: #5FD680;
+  /* Button font - 16pt Semi Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color: #FFFFFF;
+  
+  }
+  
+  
+  .mon{
+    position: absolute;
+    width: 42.78px;
+    height: 39px;
+    left: 33px;
+    top: 241px;
+    border: 0;
+    
+    border-radius: 5px;
+  }
+  .tue{
+    position: absolute;
+  width: 42.78px;
+  height: 39px;
+  left: 83.75px;
+  top: 241px;
+  border: 0;
+  
+  border-radius: 5px;
+  }
+  .wed{
+    position: absolute;
+  width: 42.78px;
+  height: 39px;
+  left: 134.95px;
+  top: 241px;
+  border: 0;
+  
+  border-radius: 5px;
+  }
+  
+  
+  .thu{
+    position: absolute;
+  width: 42.78px;
+  height: 39px;
+  left: 184.52px;
+  top: 241px;
+  border: 0;
+  
+  border-radius: 5px;
+  }
+  
+  .fri{
+  position: absolute;
+  width: 42.78px;
+  height: 39px;
+  left: 235.27px;
+  top: 241px;
+  border:0;
+  
+  border-radius: 5px;
+  }
+  .sat{
+    position: absolute;
+  width: 42.78px;
+  height: 39px;
+  left: 286.47px;
+  top: 241px;
+  border:0;
+  border-radius: 5px;
+  }
+  
+  
+  .sun{
+    position: absolute;
+  width: 42.78px;
+  height: 39px;
+  left: 337.22px; 
+  top: 241px;
+  border:0;
+  
+  border-radius: 5px;
+  }
+  
+  #daily{
+    background: #ECECEC;
+    font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 174%;
+  
+  /* or 24px */
+  text-align: center;
+  }
+  
+  
+  
+  
+  .all-day{
+    position: absolute;
+  width: 315px;
+  height: 53px;
+  left: 51px;
+  top: 315px;
+  border: 0;
+  background: #ECECEC;
+  border-radius: 5px;
+  }
+  
+  
+  .All{
+    position: absolute;
+  width: 315px;
+  height: 53px;
+  left: 51px;
+  top: 315px;
+  
+  
+  border-radius: 5px;
+  }
+   #all-day{
+   
+    /* Button font - 16pt Semi Bold */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    background: #ECECEC;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.01em;
+    border: 0;
+    color: #000000;
+   }
+  
+   #all-day-selected{
+     /* Button font - 16pt Semi Bold */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    background: #5FD680;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.01em;
+    border: 0;
+    color: #FFFFFF;
+   }
+  
+   .time_nine{
+    position: absolute;
+    width: 143.06px;
+    height: 51.01px;
+    left: 54.37px;
+    top: 385px;
+    border-radius: 5px;
+    border: 0;
+   }
+  
+  #time{
+    background: #ECECEC;
+    
+  /* Button font - 16pt Semi Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color: #000000;
+  }
+  
+  #time-selected{
+    background: #5FD680;
+  
+  /* Button font - 16pt Semi Bold */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color: #FFFFFF;
+  }
+  
+  .time_ten{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 216.94px;
+  top: 385px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  
+  .time_eleven{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 54.37px;
+  top: 449px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  
+  
+  .time_twelve{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 216.94px;
+  top: 449px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  
+  .time_thirteen{
+    position: absolute;
+    width: 143.06px;
+    height: 51.01px;
+    left: 54.37px;
+    top: 512.16px;
+    border: 0;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .time_fourteen{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 217px;
+  top: 513px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  
+  
+  .time_fifteen{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 54.37px;
+  top: 576.53px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  
+  .time_sixteen{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 216.68px;
+  top: 576.53px;
+  border: 0;
+  
+  border-radius: 5px;
+  }
+  
+  
+  
+  .time_seventeen{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 53px;
+  top: 640.84px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  .time_eighteen{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 217.94px;
+  top: 640.84px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  .time_nineteen
+  {
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 54.37px;
+  top: 704px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  .time_twenty{
+    position: absolute;
+  width: 143.06px;
+  height: 51.01px;
+  left: 215.94px;
+  top: 704px;
+  border: 0;
+  border-radius: 5px;
+  }
+  
+  
+  .save-availability{
+    position: absolute;
+    width: 354px;
+    height: 60px;
+    left: 33px;
+    right: 27px;
+    top: 801px;
+    bottom: 35px;
+    background: #68ADEC;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  border: 0;
+  /* identical to box height */
+  text-align: center;
+  
+  color: #FFFFFF;
+  }
+  
+  
+  /* How do you like to help */
+  
+  .profile-bg-hero{
+    position: absolute;
+  width: 414px;
+  height: 219px;
+  left: 0px;
+  top: 0px;
+  
+  background: #68ADEC;
+  
+  
+     
+  }
+  
+  .h1-hero{
+    position: absolute;
+  width: 354px;
+  height: 72px;
+  left: 30px;
+  top: 92px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  
+  color: #FFFFFF;
+  }
+  
+  .car-hero{
+    position: absolute;
+  width: 247px;
+  height: 16px;
+  left: 59px;
+  top: 272px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  
+  color: #212121;
+  
+  
+  }
+  
+  .car{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 351px;
+    top: 269px;
+    
+    background: #5FD680;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  
+  .deliver-hero{
+    position: absolute;
+  width: 263px;
+  height: 16px;
+  left: 59px;
+  top: 323px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  
+  color: #212121;
+  }
+  
+  .deliver{
+    position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 351px;
+  top: 322px;
+  
+  
+  }
+  
+  .shopping-hero{
+    position: absolute;
+  width: 263px;
+  height: 16px;
+  left: 59px;
+  top: 374px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  
+  color: #212121;
+  
+  
+  }
+  
+  
+  .shopping{
+    position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 351px;
+  top: 373px;
+  }
+  
+  .walk-hero{
+    position: absolute;
+  width: 247px;
+  height: 16px;
+  left: 59px;
+  top: 425px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  
+  color: #212121;
+  
+  
+  }
+  
+  .walk{
+    position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 351px;
+  top: 424px;
+  }
+  
+  .furniture-hero{
+    position: absolute;
+    width: 292px;
+    height: 37px;
+    left: 59px;
+    top: 476px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    
+    color: #212121;
+    
+    
+  }
+  
+  .furniture{
+    position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 351px;
+  top: 485px;
+  }
+  
+  .covid{
+    position: absolute;
+  width: 247px;
+  height: 44px;
+  left: 59px;
+  top: 547px;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  
+  color: #212121;
+  
+  
+  }
+  
+  .test{
+    position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 351px;
+  top: 556px;
+  
+  
+  }
+  
+  .hero-btn{
+    position: absolute;
+  width: 354px;
+  height: 60px;
+  left: 30px;
+  top: 661px;
+  right: 30px;
+  bottom: 179px;
+  background: #68ADEC;
+  border-radius: 10px;
+  border: 0;
+  
+  }
+  
+  .food-hero_icon{
+    position: absolute;
+    top: 784px;
+    left: 63px;
+    right: 299.31px;
+    bottom: 56.97px;
+  }
+  
+  .driving-hero_icon{
+    position: absolute;
+    top: 784px;
+    left: 147px;
+    right: 217.15px;
+    bottom: 56.97px
+  }
+  
+  .med-hero_icon{
+    position: absolute;
+    top: 784px;
+    left: 227.33px;
+    right: 134.98px;
+    bottom: 56.97px
+  }
+  
+  .others-hero_icon{
+    position: absolute;
+    top: 784px;
+    left: 300.5px;
+    right: 52.82px;
+    bottom: 56.97px
+  }
+  
+  .vector-hero_icon{
+    position: absolute;
+    left: 32px;
+    top:  32px;
+    right: 371.83px;
+    bottom: 169px;
+    color: white;
+  }
+  
+  

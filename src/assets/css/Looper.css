@@ -1,0 +1,248 @@
+/* food */
+
+.food1 img{
+position: absolute;
+width: 191.23px;
+height: 177.72px;
+left: 183px;
+top: 203px;
+}
+
+
+/* Transport */
+
+.trans img{
+position: absolute;
+width: 96.15px;
+height: 104.48px;
+left: 459.36px;
+top: 227.05px;
+}
+
+.trans p{
+
+position: absolute;
+width: 112px;
+height: 30px;
+left: 451px;
+top: 336px;
+
+
+/* Main Heading - 18pt Bold */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #000000;
+}
+
+/* Pharmacy */
+
+.med img{
+position: absolute;
+width: 86.31px;
+height: 104.48px;
+left: 28.99%;
+right:60.35%;
+top: 70.78%;
+bottom:12.92%;
+}
+
+.med p{
+
+position: absolute;
+width: 120px;
+height: 29px;
+left: 221px;
+top: 563px;
+
+/* Main Heading - 18pt Bold */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+letter-spacing: 0.01em;
+}
+
+/* Other */
+
+.other img{
+position: absolute;
+width: 86.31px;
+height: 104.48px;
+left: 56.79%;
+right: 31.23%;
+top: 70.67%;
+bottom: 12.79%;
+}
+
+.other p{
+	
+position: absolute;
+width: 65px;
+height:29px;
+left: 474px;
+top: 563px;
+
+/* Main Heading - 18pt Bold */
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #000000;
+}
+
+
+/* Looper request type  */
+
+#req_helptype p{
+	text-align:center;
+}
+
+.helptype{
+	position: relative;
+	width:810px;
+	height:641px;
+	background:#FFF9F4;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.25);
+	border-radius:15px;
+	
+}
+
+/* Food Request   */
+#request_food{
+	position:relative;
+	width:810px;
+	height:641px;
+	background:#FFF9F4;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.25);
+	border-radius:15px;
+
+}
+
+
+/* Our Heroes are here to help with food shopping.   */
+.Food_reqtext p{
+position: absolute;
+width: 411px;
+height: 34px;
+left: 131px;
+top: 186px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.01em;
+
+color: #000000;
+
+}
+
+/* Need to change? Click here: */
+
+.Needtochange p{
+
+position: absolute;
+width: 195px;
+height: 14px;
+left: 514px;
+top: 63px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.01em;
+
+color: #8C8C8C;
+
+}
+
+/* med */
+.Needtochange img{
+
+position: absolute;
+width: 37.2px;
+height: 44.22px;
+left: 583.35px;
+top: 88.86px;
+}
+
+/* Rectangle 21 */
+.foodbox form{
+position: absolute;
+width: 547px;
+height: 195.61px;
+left: 131px;
+top: 245.39px;
+
+background: #FFFFFF;
+border: 1px solid #C4C4C4;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.foodicon img{
+
+position: absolute;
+left: 14.57%;
+right: 75.86%;
+top: 9.83%;
+bottom: 77.22%;
+}
+
+/* Med Request   */
+#request_med{
+	position:relative;
+	width:810px;
+	height:641px;
+	background:#FFF9F4;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.25);
+	border-radius:15px;
+
+}
+
+
+/* OthrsRequest   */
+#request_others{
+	position:relative;
+	width:810px;
+	height:641px;
+	background:#FFF9F4;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.25);
+	border-radius:15px;
+
+}
+
+/* Trans Request   */
+#request_trans{
+	position:relative;
+	width:810px;
+	height:641px;
+	background:#FFF9F4;
+	box-shadow:4px 10px 10px rgba(0,0,0,0.25);
+	border-radius:15px;
+
+}
+
+
+#Request_Type img{
+	align:center;
+	margin-left:200px;
+}

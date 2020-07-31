@@ -8,31 +8,67 @@ import Welcome from "./components/pages/welcome";
 
 import RegistrationTerms from "./components/pages/registration/terms";
 import RegistrationAlternatives from "./components/pages/registration/alternatives";
+import RegistrationSignin from "./components/pages/registration/signin";
 import RegistrationInformation from "./components/pages/registration/information";
 import RegistrationSkills from "./components/pages/registration/skills";
 import RegistrationFinish from "./components/pages/registration/finish";
 
-import Thankyou from "./components/pages/request/thankYou"
-import RequestVolunteer from "./components/pages/request/reqVolunteer"
-import ReceiverRequest from "./components/pages/request/receiverReq"
-import RequestType from "./components/pages/request/requestType.js"
-import RequestType1 from "./components/pages/request/requestType1.js"
-import RequestHelpType from "./components/pages/request/helpType"
-import RequestSpecify from "./components/pages/request/specify"
+
+
+import SelectType from "./components/pages/looper/selectType"
+
+import RequestHelpType from "./components/pages/looper/helpType"
+import FoodRequest from "./components/pages/looper/request/foodRequest"
+import TransRequest from "./components/pages/looper/request/transRequest"
+import MedRequest from "./components/pages/looper/request/medRequest"
+import OthersRequest from "./components/pages/looper/request/othersRequest"
+import RequestDrivingTime from "./components/pages/looper/requestDrivingPickupTime"
+import DeliveryPayment from "./components/pages/looper/deliveryPayment"
+import Availability from "./components/pages/looper/availability"
+import RequestSplashScreen from "./components/pages/looper/reqSplashScreen"
+import RequestFinish from "./components/pages/looper/requestFinish"
+
+import Watson from "./components/pages/Watson"
+
+
+import MyTasks from "./components/pages/hero/request/mytasks"
+import MyTasks2 from "./components/pages/hero/request/mytasks2"
+import MyTasksWeb from "./components/pages/hero/request/mytasksweb"
+import MyTasksWebHero from "./components/pages/hero/request/mytaskswebhero"
+
+import ProfileWeb from "./components/pages/hero/profile/myProfile"
+import LooperProfile from "./components/pages/looper/profile/myProfile"
+
+
+
 import RequestConfirmation from "./components/pages/request/confirmation"
-import VolunteerMessage from "./components/pages/request/volunteerMessage"
 import RequestMap from "./components/pages/request/map"
 
 import HelperMap from "./components/pages/helper/map"
+import MarkerInfoWindow from "./components/pages/helper/markerInfoWindow"
 
 import Rate from "./components/pages/ratings/rate"
 import RatingsPending from "./components/pages/ratings/pending"
+
+import MyHeroApp from "./components/pages/ratings/myheroapp"
+import RateHero from "./components/pages/ratings/ratehero"
+import RateLooper from "./components/pages/ratings/ratelooper"
+
 
 import persistentStore from './stores/PersistentStore'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./assets/css/App.css";
+import "./assets/css/request.css";
+import "./assets/css/Looper.css";
+import "./assets/css/looper1.css";
+import "./assets/css/looper2.css";
+import "./assets/css/Map.css";
+import "./assets/css/availability.css";
+import "./assets/css/profilewebcss.css";
+
+
 import "./assets/css/media-queries.css";
 import logo from "./assets/img/logo.png";
 
@@ -81,50 +117,86 @@ class App extends Component {
 
         if (response.profile === null) {
 
-          this.props.history.push("/registration/alternatives" );
-          //console.log(`ProfileJSON response --> ${response.profileJSON}`);
-          //console.log(`ProfileJSON content --> ${response.json}`);
-          window.location.reload ();
+          //setNotFound(true);
+          this.props.history.push("/registration/information" );
+         
 
         } 
         else {
-          this.setState({userProfile: response.profile});
-          //console.log("UserProfile: ", this.state.userProfile);
-          this.props.history.push("/helper/map" );
-          window.location.reload();
-
+          this.setState({userProfile: (userSession)});
+          console.log("Userprofile found");
+          console.log("UserProfile: ", this.state.userProfile);
+          this.setState({ redirect: '/help-request' }); 
         }
         }
 
-        doFetchProfile();     
+        doFetchProfile();
+        
         
     },
   };
     return (
       <Connect className="App" authOptions={authOptions}>
       <Provider {...persistentStore}>
+	  
         <BrowserRouter>
                 <Switch>
                   
+				  <Route path="/looper/selectType" component={SelectType} />
+				  <Route path="/looper/helpType" component={RequestHelpType} />
+
+				  <Route path="/looper/request/foodRequest" component={FoodRequest} />
+				  <Route path="/looper/request/transRequest" component={TransRequest} />
+				  <Route path="/looper/request/medRequest" component={MedRequest} />
+				  <Route path="/looper/request/othersRequest" component={OthersRequest} />
+				  <Route path="/looper/requestDrivingPickupTime" component={RequestDrivingTime} />
+				  <Route path="/looper/deliveryPayment" component={DeliveryPayment} />
+				  
+				  <Route path="/hero/request/mytasks" component={MyTasks} />
+                  <Route path="/hero/request/mytasks2" component={MyTasks2} />
+                  <Route path="/hero/request/mytasksweb" component={MyTasksWeb} />
+                  <Route path="/hero/profile/myProfile" component={ProfileWeb} />
+                  <Route path="/looper/profile/myProfile" component={LooperProfile} />
+                  
+				  <Route path="/hero/request/mytaskswebhero" component={MyTasksWebHero} />
+                  
                   <Route path="/helper/map" component={HelperMap} />
                   <Route path="/request/map" component={RequestMap} />
+				  <Route path="/helper/markerInfoWindow" component={MarkerInfoWindow} />
+				  
                   <LandingLayout>
                   <Route path="/welcome" component={Welcome} />
+				  
                   <Route path="/signin" component={Signin} />
                   <Route path="/registration/terms" component={RegistrationTerms} />
                   <Route path="/registration/alternatives" component={RegistrationAlternatives} />
+                  <Route path="/registration/signin" component={RegistrationSignin} />
                   <Route path="/registration/information" component={RegistrationInformation} />
+				  
                   <Route path="/registration/skills" component={RegistrationSkills} />
                   <Route path="/registration/finish" component={RegistrationFinish} />
                   <Route path="/request/helpType" component={RequestHelpType} />
-                  <Route path="/request/thankYou" component={Thankyou} />
-                  <Route path="/request/reqVolunteer" component={RequestVolunteer} />
-                  <Route path="/request/receiverReq" component={ReceiverRequest} />
-                  <Route path="/request/requestType" component={RequestType} />
-                  <Route path="/request/requestType1" component={RequestType1} />
-                  <Route path="/request/specify" component={RequestSpecify} />
+                  
+				  
+
+
+
+				  <Route path="/hero/request/mytaskswebhero" component={MyTasksWebHero} />
+                  
+
+				<Route path="/looper/availability" component={Availability} />
+				<Route path="/looper/reqSplashScreen" component={RequestSplashScreen} />
+			   <Route path="/looper/requestFinish" component={RequestFinish} />
+			
+
+
+				 <Route path="/ratings/myheroapp" component={MyHeroApp} />
+                  <Route path="/ratings/ratehero" component={RateHero} />
+                  <Route path="/ratings/ratelooper" component={RateLooper} />
+                  
+
+				  
                   <Route path="/request/confirmation" component={RequestConfirmation} />
-                  <Route path="/request/volunteerMessage" component={VolunteerMessage} />
                   <Route path="/ratings/pending" component={RatingsPending} />
                   <Route path="/ratings/rate" component={Rate} />
                   <Route exact path="/" component={Home}/>

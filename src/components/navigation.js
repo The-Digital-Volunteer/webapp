@@ -113,20 +113,15 @@ class Navigation extends React.Component {
               {!user.isLoggedIn() && (
                 <div>
                   <span className='nav-link' onClick={() => this.navigate('')}>
-                    Leaderboard
+                    About
                   </span>
                   <span className='nav-link' onClick={() => this.navigate('')}>
-                    My profile
+                    How it works
                   </span>
                   <span className='nav-link' onClick={() => this.navigate('')}>
-                    Pending status and history
+                    Contact
                   </span>
-                  <span
-                    className='nav-link'
-                    onClick={() => this.navigate('/ratings/pending')}
-                  >
-                    Rate
-                  </span>                 
+                                   
                 </div>
               )}
               <Auth/>

@@ -1,0 +1,185 @@
+/* Request*/
+#img1{
+	position: absolute;
+width: 111px;
+height: 111px;
+left: 341px;
+top: 102px;
+}
+
+#t1 {
+	text-align: center;
+width: 120px;
+height: 70px;
+
+background: #ECECEC;
+}
+#img2 {
+	position: absolute;
+left: 49.63%;
+right: 34.81%;
+top: 13.73%;
+bottom: 68.02%;
+}
+#img3{
+	position: absolute;
+left: 69.63%;
+right: 14.81%;
+top: 13.73%;
+bottom: 68.02%;
+}
+#t3 {
+	position: absolute;
+left: 50.37%;
+right: 35.56%;
+top: 33.7%;
+bottom: 62.71%;
+}
+#t4 {
+	position: absolute;
+left: 69.63%;
+right: 14.69%;
+top: 33.7%;
+bottom: 62.71%;
+}
+#img4
+{
+	position: absolute;
+left: 45.06%;
+right: 41.73%;
+top: 46.49%;
+bottom: 37.6%;
+}
+#img5{
+	position: absolute;
+left: 60.74%;
+right: 25.68%;
+top: 46.49%;
+bottom: 37.6%;
+}
+
+#img6 {
+	position: absolute;
+left: 77.04%;
+right: 9.38%;
+top: 46.49%;
+bottom: 37.6%;
+}
+h5{
+	font-weight: bold;
+}
+h {
+	font-weight: bold;
+}
+b {
+	position: center;
+width: 381px;
+height: 108px;
+left: 366px;
+top: 75px;
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #68ADEC;
+}
+#i2 {
+	position: absolute;
+left: 63.46%;
+right: 31.95%;
+top: 14.2%;
+bottom: 78.91%;
+}
+#i3 {
+	position: absolute;
+left: 79.99%;
+right: 15.42%;
+top: 14.05%;
+bottom: 79.05%;
+}
+#i4 {
+	position: absolute;
+left: 71.98%;
+right: 23.43%;
+top: 14.04%;
+bottom: 79.06%;
+}
+#pic {
+position: absolute;
+left: 115px;
+right: 9.38%;
+top: 213px;
+bottom: 37.6%;
+}
+#pic2 {
+	position: absolute;
+left: 420px;
+right: 9.38%;
+top: 213px;
+bottom: 37.6%;
+}
+#pic3 {
+	position: absolute;
+left: 680px;
+right: 9.38%;
+top: 213px;
+bottom: 37.6%;
+}
+#text1 {
+	position: absolute;
+width: 247px;
+height: 45px;
+left: 239px;
+top: 857px;
+}
+#pic4 {
+	position: absolute;
+width: 1065px;
+height: 290px;
+left: 0px;
+top: 734px;
+}
+#pic5 {
+	position: absolute;
+width: 375px;
+height: 905px;
+left: 1065px;
+top: 120px;
+}
+
+
+/* loopermyTasks */
+#header1 {
+	position: absolute;
+left: 15%;
+right: 0%;
+top: 5%;
+bottom: 80%;
+}
+#close1 {
+	position: absolute;
+left: 70.07%;
+right: 5.38%;
+top: 10.51%;
+bottom: 92.49%;
+}
+#top1 {
+	position: absolute;
+left: 28.78%;
+right: 18.33%;
+top: 24.83%;
+bottom: 42.9%;
+
+}
+#bottom1 {
+position: absolute;
+left: 28.78%;
+right: 18.11%;
+top: 58.03%;
+bottom: 9.78%;
+
+}

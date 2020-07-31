@@ -20,7 +20,7 @@
 #hero {
     display: flex;
     align-items: center;
-    height: 55vh;
+    height: 75vh;
     background-image: url("../img/the-digital-volunteer-key-visual.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,13 +29,22 @@
 #hero-cta {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    margin-top: 35px;
+    align-items: center;
+    margin-top: 50px;
+	margin-bottom:50px;
 }
 
 #hero-cta h1 {
-    font-size: 36px;
+    font-size: 24px;
+	text-align:left;
 }
+
+#hero-cta p{
+    font-size: 16px;
+	text-align:justify-content;
+
+}
+
 
 #vertical-separator {
     width: 50vw;
