@@ -16,14 +16,11 @@ This is the future of community help, and we have IBM tools to thank for it: Wat
 
 ## Demo video
 
-
-
-
+[![TheHeroLoopVideo](http://loopdigital.se/images/IBM-image-YouTube.png)](http://www.youtube.com/watch?v=iGajZwkXlKk&feature=youtu.be "TheHeroLoop")
 
 
 ## Architecture Overview
-![TheHeroLoopLogo](http://loopdigital.se/images/Architectual-Overview-withXs2.jpg)
-<p>The red X means it is not yet implemented in the MVP, but in progress.</p>
+![TheHeroLoopArchitecture](http://loopdigital.se/images/HeroLoopArchitecture.png)
 
 ## Long description
 The HeroLoop allows users to request a task by calling in or by using the app. Every request is being processed using IBM Watson and AI/ML NLTK removing toxic use, and a volunteer (we call them Heroes) is matched using AI, based on their location and availability. The Heroes can find all the available tasks within their 20km radius, easily visible on a map dashboard. Both parties must approve each other for the task, and users can chat or call each other to coordinate its completion with the requester (We call them Loopers, because they keep the loop going).
@@ -210,15 +207,30 @@ Google Speech to text </br>
 AI/ML 1) NLTK filtering of toxic use and 2) matching of users
 
 
-## Contributing
-Who can contribute to the code and how
+## Authors and contributors
 
-## Versioning
-
-
-## Authors
-List of all authors and contributors - make sure to tag everybody
-
-
+##### Bente Acking
+Idea The Digital Volunteer / TheHeroLoop </br>
+PO/PM</br>
+Founder & CEO Loopdigital</br>
+bente.acking@loopdigital.se</br>
+</br></br>
+##### Suneetha Jonnadula
+OpenShift CI/CD</br>
+Full stack developer</br>
+suneetha.jonnadula@gmail.com</br>
+</br></br>
+##### Ruthy Lichtenstein
+UX/UI Design</br>
+ruthy.licht@gmail.com</br>
+</br></br>
+##### Emmanuel Murairi
+Blockstack and React/Node.js</br>
+emurairi18@alastudents.org</br>
+</br></br>
+##### Keerti Bhogaradju
+AI/ML</br>
+bhogaraju.keerti17@gmail.com</br>
+</br></br>
 
 
