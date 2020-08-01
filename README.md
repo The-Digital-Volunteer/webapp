@@ -239,7 +239,7 @@ ruthy.licht@gmail.com</br>
 Blockstack and React/Node.js</br>
 emurairi18@alastudents.org</br>
 </br>
-##### Keerti Bhogaradju
+##### Keerti Bhogaraju
 AI/ML</br>
 bhogaraju.keerti17@gmail.com</br>
 </br>
