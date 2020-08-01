@@ -27,7 +27,8 @@ IBM Cloud</br>
 ## Demo video
 
 [![TheHeroLoopVideo](http://loopdigital.se/images/IBM-image-YouTube.png)](http://www.youtube.com/watch?v=iGajZwkXlKk&feature=youtu.be "TheHeroLoop")
-Please click on the image to view the video.
+For GitHub use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link to open in new window.
+Please click on the image to view the video on YouTube.
 
 ## Architecture Overview
 ![TheHeroLoopArchitecture](http://loopdigital.se/images/HeroLoopArchitecture.png)
@@ -56,7 +57,7 @@ Decentralized login enables the user to choose what data to share. TheHeroLoop w
 The Blockstak solution offers a decentralized encrypted authentication, removing third parties or remote servers in handling sensitive user data. It gives back the power to the user of owning their personal data, and deciding what about their identity to be disclosed. 
 
 During the authentication flow, the user gets a public decentralised identifier (a DID) "hash key" which will be verified against the private key stored on his/her  storage of choice. Once the user is authenticated, all application data holding the user information is encrypted and stored either on the user local storage or prefered cloud storage using Gaia.
-![TheHeroLoopLogo](https://docs.blockstack.org/storage/images/gaia-writes.png) 
+![TheHeroLoopGaia](https://docs.blockstack.org/storage/images/gaia-writes.png) 
 
 The private information stored in TheHeroLoop webapp is restricted to what is entered by the users themselves. All user generated data is tied to the public hash key.
 
@@ -67,7 +68,7 @@ TheHeroLoop will penetrate solutions that removes toxic use.
 
 Another layer of security is TheHeroLoop never exposes the recipient’s public/hash key. It is considered cryptographically secure to share a public key, but not exposing it makes the system even more robust.
 
-![TheHeroLoopLogo](https://docs.blockstack.org/storage/images/app-sign-in.png) 
+![TheHeroLoopBlockstack](https://docs.blockstack.org/storage/images/app-sign-in.png) 
 The platform verifies requests with the associated key using the token hash algorithm from Blockstack. It’s only the hash key that passes within the centralised data.
 
 The landline functionality enables Loopers to call in and leave a voicenote requesting help from a Hero. This note is transcribed with speech to text and AI/ML models are applied. A pin is created and placed on the map with a need for a Hero  within a radius of 20 km area. The area the Looper stated in the voicenote. 
@@ -84,7 +85,8 @@ To solve in-app chat Apache Kafka is used as the messaging system. It provides a
 
 In the future more functionality enabled by Kafka will be used in the webapp. 
 
-![TheHeroLoopLogo](http://loopdigital.se/images/Roadmap.png) 
+![TheHeroLoopRoadmap](http://loopdigital.se/images/Roadmap.png)
+For GitHub use CTRL+click (on Windows and Linux) or CMD+click (on MacOS) on the link to open in new window.
 
 ## Project roadmap
 What's next for TheHeroLoop. 
