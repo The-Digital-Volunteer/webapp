@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import LoginExpGif from '../../../assets/img/login-exp.gif'
+import image from '../../../assets/img/request.gif'
 import CloseIcon from '../../../assets/img/close.svg'
 
 const RequestSplashScreen = () => {
@@ -28,10 +28,13 @@ const RequestSplashScreen = () => {
           onClick={closeSplashScreen}
         />
         <img
-          src={LoginExpGif}
+          src={image}
           alt='login-exp'
           className='centered'
         />
+	   <h2 style={{color:"#F7AF69"}}>Calling up all local Heros..........</h2>
+	  <h3 style={{color:"#F7AF69"}}>We will notify you,as soon as we find someone!..</h3>
+	  
       </div>
     )
   )

@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from '../../menu_dashboard/looper_header'
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Shopping from "../../../../assets/img/shopping.png";
 import Phone from "../../../../assets/img/phone.png";
-import Chat from "../../../../assets/img/chat.png";
+
 import pic from "../../../../assets/img/volunteer.png";
 import pic1 from "../../../../assets/img/Vector.png";
 import pic2 from "../../../../assets/img/food2.png";
@@ -33,32 +34,67 @@ import pic23 from "../../../../assets/img/timeslot2.png";
 import pic24 from "../../../../assets/img/timeslot3.png";
 import pic25 from "../../../../assets/img/editbutton.png";
 
+import Profile from '../../../../assets/img/hero-header/profile.svg'
+import Chat from '../../../../assets/img/hero-header/chat.svg'
+import RateLooper from '../../../../assets/img/hero-header/rateLooper.svg'
+import HallofFame from '../../../../assets/img/hero-header/hallOfFame.svg'
+import HeroLog from '../../../../assets/img/hero-header/heroLog.svg'
+import Task from '../../../../assets/img/hero-header/task.svg'
+import Map from '../../../../assets/img/hero-header/map.svg'
+
 
 class ProfileWeb extends React.Component {
+	 menus = [
+    {
+      img: Profile,
+      to: '/hero/profile/myprofile',
+      text: 'Profile',
+    },
+    {
+      img: Chat,
+      to: '/chat',
+      text: 'Chat',
+    },
+    {
+      img: RateLooper,
+      to: '/ratings/ratelooper',
+      text: 'Rate a Looper',
+    },
+    {
+      img: HallofFame,
+      to: '/hall-of-fame',
+      text: 'Hall of Fame',
+    },
+    {
+      img: HeroLog,
+      to: '/ratings/myheroapp',
+      text: 'My Hero Log',
+    },
+    {
+      img: Task,
+      to: '/hero/request/mytasks2',
+      text: 'My Tasks',
+    },
+    {
+      img: Map,
+      to: '/helper/map',
+      text: 'The Map',
+    },
+    {
+      to: '/request',
+      text: 'I need a Hero',
+    },
+  ]
+
+
   render() {
     return (
+	<>
+	<Header menus={this.menus} />
+    
       <div className="wrapper">
         <section id="Request_type">
-			<div className="s">
-				<Link to="/request/profileweb">
-				<img id="s1" src={pic} />
-				<p id="s2">Profile</p></Link>
-				<img id="s3" src={pic10} />
-				<p id="s4">Chat</p>
-				<Link to="/ratings/herorating">
-				<img id="s5" src={pic11} />
-				<p id="s6">Rate a Looper</p></Link>
-				<img id="s7" src={pic12} />
-				<p id="s8">Hall of Fame</p>
-				<img id="s9" src={pic13} />
-				<Link to="/ratings/myheroweb">
-				<p id="s10">My Hero Log</p></Link>
-				<Link to="/request/mytaskswebhero">
-				<img id="s11" src={pic14} />
-				<p id="s12">My Tasks</p></Link>
-				<img id="s13" src={pic15} />
-				<p id="s14">The Map</p>
-			</div>
+			
 			<div className="s15">
 				<img id="s16" src={pic} />
 				<img id="s17" src={pic16} />
@@ -109,6 +145,7 @@ class ProfileWeb extends React.Component {
 			</div>
 		</section>
       </div>
+	  </>
     );
   }
 }

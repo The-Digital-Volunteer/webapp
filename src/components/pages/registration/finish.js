@@ -7,7 +7,7 @@ import Progress from "./progress";
 
 class RegistrationFinish extends React.Component {
   render() {
-    const current = 5;
+    const current = 6;
 
     return (
       <div className="wrapper">
@@ -25,12 +25,12 @@ class RegistrationFinish extends React.Component {
           </div>
 
           <div className="mt-4">
-            <Link to="/request/helpType">
+            <Link to="/looper/helpType">
               <Button className="btn btn-block helper-btn">
                 Start your first request
               </Button>
             </Link>
-            <Link to="/helper/map">
+            <Link to="/hero/heroBoarding">
               <Button className="btn btn-block btn-secondary">
                 Offer your help
               </Button>

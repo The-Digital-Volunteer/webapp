@@ -12,12 +12,74 @@ import Map from '../../../assets/img/hero-header/map.svg'
 class RequestMap extends React.Component {
   state = {
     apiKey: '',
+    markers: [
+      {
+        id: 1,
+        title: 'Grocery shopping',
+        owner: 'Agda',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utporttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitaemassa vulputate, auctor metus seLorem ipsum dolor sit amet,consectetur adipiscing elit. Ut porttitor facilisis massa velmaximus. Nulla facilisi.',
+        lat: 43.653225,
+        lng: -79.383186,
+        type: 'food',
+        timeSlots: ['01:00-02:00', '02:00-03:00', '03:00-04:00'],
+      },
+      {
+        id: 2,
+        title: 'Travel',
+        owner: 'Agda1',
+        description: 'Lorem ipsum dolor sit amet, ',
+        lat: 43.853225,
+        lng: -79.383186,
+        type: 'travel',
+        timeSlots: [
+          '01:00-02:00',
+          '02:00-03:00',
+          '03:00-04:00',
+          '05:00-06:00',
+        ],
+      },
+      {
+        id: 3,
+        title: 'Pharmacy',
+        owner: 'Agda2',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utporttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitaemassa vulputate, auctor metus seLorem ipsum dolor sit amet,consectetur adipiscing elit. Ut porttitor facilisis massa velmaximus. Nulla facilisi.',
+        lat: 43.1153225,
+        lng: -79.383186,
+        type: 'pharmacy',
+        timeSlots: [
+          '01:00-02:00',
+          '02:00-03:00',
+          '03:00-04:00',
+          '05:00-06:00',
+        ],
+      },
+      {
+        id: 4,
+        title: 'Other',
+        owner: 'Agda3',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utporttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitaemassa vulputate, auctor metus seLorem ipsum dolor sit amet,consectetur adipiscing elit. Ut porttitor facilisis massa velmaximus. Nulla facilisi.',
+        lat: 44,
+        lng: -79.383186,
+        type: 'other',
+        timeSlots: [
+          '01:00-02:00',
+          '02:00-03:00',
+          '03:00-04:00',
+          '05:00-06:00',
+          '07:00-08:00',
+          '09:00-10:00',
+        ],
+      },
+    ],
   }
 
   menus = [
     {
       img: Profile,
-      to: '/profile',
+      to: '/hero/profile/myProfile',
       text: 'Profile',
     },
     {
@@ -27,7 +89,7 @@ class RequestMap extends React.Component {
     },
     {
       img: RateLooper,
-      to: '/rate-looper',
+      to: '/ratings/rateLooper',
       text: 'Rate a Looper',
     },
     {
@@ -43,11 +105,11 @@ class RequestMap extends React.Component {
     {
       img: Task,
       to: '/tasks',
-      text: 'My Tasks',
+      text: 'My Tasks2',
     },
     {
       img: Map,
-      to: '/map',
+      to: '/helper/map',
       text: 'The Map',
     },
     {
@@ -56,6 +118,7 @@ class RequestMap extends React.Component {
     },
   ]
   render() {
+    const { markers } = this.state
     return (
       <>
         <Header menus={this.menus} />
@@ -64,7 +127,9 @@ class RequestMap extends React.Component {
             <div className='text-box'>
               <p className='title'>Who need help?</p>
               <p className='subtitle'>
-                Click on the pins to see the task details
+                {markers.length > 0
+                  ? 'Click on the pins to see the task details'
+                  : "Looks like help is not needed at this time, but get ready to Hero. We'll notify you as soon as a task is submitted"}
                 <Link
                   className='subtitle-right'
                   to='/request/map'
@@ -73,7 +138,10 @@ class RequestMap extends React.Component {
                 </Link>
               </p>
             </div>
-            <MapContainer apiKey={this.state.apiKey} />
+            <MapContainer
+              apiKey={this.state.apiKey}
+              markers={markers}
+            />
           </section>
         </div>
       </>

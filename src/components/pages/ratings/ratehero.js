@@ -1,15 +1,69 @@
 import { inject, observer } from "mobx-react";
 import React from "react";
 import { withRouter } from 'react-router';
+import { Link } from "react-router-dom";
+import Header from '../menu_dashboard/looper_header'
+
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-// TODO: read from profile
-import profile from "../../../assets/img/volunteer.png";
-import heart from "../../../assets/img/hearts.png";
+import Profile from '../../../assets/img/hero-header/profile.svg'
+import Chat from '../../../assets/img/hero-header/chat.svg'
+import RLooper from '../../../assets/img/hero-header/rateLooper.svg'
+import HallofFame from '../../../assets/img/hero-header/hallOfFame.svg'
+import HeroLog from '../../../assets/img/hero-header/heroLog.svg'
+import Task from '../../../assets/img/hero-header/task.svg'
+import Map from '../../../assets/img/hero-header/map.svg'
 
-class RateHero extends React.Component {
+
+// TODO: read from profile
+import looper from "../../../assets/img/volunteer.png";
+
+class RateLooper extends React.Component {
+	
+	menus = [
+    {
+      img: Profile,
+      to: '/looper/profile/myprofile',
+      text: 'Profile',
+    },
+    {
+      img: Chat,
+      to: '/chat',
+      text: 'Chat',
+    },
+    {
+      img: RLooper,
+      to: '/ratings/ratehero',
+      text: 'Rate a Hero',
+    },
+    {
+      img: HallofFame,
+      to: '/hall-of-fame',
+      text: 'Hall of Fame',
+    },
+    {
+      img: HeroLog,
+      to: '/ratings/myheroapp',
+      text: 'My Hero Log',
+    },
+    {
+      img: Task,
+      to: '/hero/request/mytasks',
+      text: 'My Tasks',
+    },
+    {
+      img: Map,
+      to: '/request/map',
+      text: 'The Map',
+    },
+    {
+      to: '/request',
+      text: 'I need a Hero',
+    },
+  ]
+
 
   constructor( props ) {
     super( props )
@@ -48,11 +102,14 @@ class RateHero extends React.Component {
     const { user, value } = rating
 
     return (
+	<>
+	<Header menus={this.menus} />
+    
       <div id="rate_form" className="wrapper">
         <section>
           <div className="text-box">
-            <h3>Rate Your Hero { user.firstName } { user.lastName }</h3>
-            <p> { user.firstName }</p>
+            <h3>How was Jane? { user.firstName } { user.lastName }</h3>
+            <p>{ user.firstName }</p>
           </div>
 
           {
@@ -67,29 +124,62 @@ class RateHero extends React.Component {
           <div id="volunteer-info" className="mt-4">
             <div className="profile-list">
               <div className="profile_info">
-                <center><img src={ profile } alt="volunteer pic"/></center>
-				<h3>How Was Jane?</h3>
+                <center><img alt="" src={ looper }/></center>
+				<h3>How Was Alex?</h3>
               </div>
+			  <center>
+              <div className="profile_info rating">
+                <span className={
+                    `rating_edit ${ value >= 10 ? 'rating_selected' : '' }`
+                  }
+                  onClick={ () => this.setRating(10) }
+                />
+                <span className={
+                    `rating_edit ${ value >= 8 ? 'rating_selected' : '' }`
+                  }
+                  onClick={ () => this.setRating(8) }
+                />
+                <span className={
+                    `rating_edit ${ value >= 6 ? 'rating_selected' : '' }`
+                  }
+                  onClick={ () => this.setRating(6) }
+                />
+                <span className={
+                    `rating_edit ${ value >= 4 ? 'rating_selected' : '' }`
+                  }
+                  onClick={ () => this.setRating(4) }
+                />
+                <span className={
+                    `rating_edit ${ value >= 2 ? 'rating_selected' : '' }`
+                  }
+                  onClick={ () => this.setRating(2) }
+                />
+              </div>
+			  </center>
             </div>
           </div>
-		   
-		  <center><img  alt=" " src={ heart } className={ heart }/></center>
-
+        </section>
 
         <div className="mt-4">
+		<Link to="/ratings/ratingsFinish">
           <Button className="btn btn-block helper-btn"
             onClick={ () => this.save() }
           >
             Submit
           </Button>
+		  </Link>
+		  <Button className="btn btn-block receiver-btn"
+            onClick={ () => this.save() }
+          >
 		  <center>No Thanks</center>
+		  </Button>
         </div>
-		</section>
-	</div>
+      </div>
+	  </>
     )
   }
 }
 
 export default withRouter(
-  inject('ratings', 'user')( observer(RateHero) )
+  inject('ratings', 'user')( observer(RateLooper) )
 )

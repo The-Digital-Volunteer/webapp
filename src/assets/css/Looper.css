@@ -1,6 +1,6 @@
 /* food */
 
-.food1 img{
+.req_food img{
 position: absolute;
 width: 191.23px;
 height: 177.72px;
@@ -11,7 +11,7 @@ top: 203px;
 
 /* Transport */
 
-.trans img{
+.req_trans img{
 position: absolute;
 width: 96.15px;
 height: 104.48px;
@@ -19,7 +19,7 @@ left: 459.36px;
 top: 227.05px;
 }
 
-.trans p{
+.req_trans p{
 
 position: absolute;
 width: 112px;
@@ -43,7 +43,7 @@ color: #000000;
 
 /* Pharmacy */
 
-.med img{
+.req_med img{
 position: absolute;
 width: 86.31px;
 height: 104.48px;
@@ -53,7 +53,7 @@ top: 70.78%;
 bottom:12.92%;
 }
 
-.med p{
+.req_med p{
 
 position: absolute;
 width: 120px;
@@ -74,7 +74,7 @@ letter-spacing: 0.01em;
 
 /* Other */
 
-.other img{
+.req_other img{
 position: absolute;
 width: 86.31px;
 height: 104.48px;
@@ -84,7 +84,7 @@ top: 70.67%;
 bottom: 12.79%;
 }
 
-.other p{
+.req_other p{
 	
 position: absolute;
 width: 65px;

@@ -22,7 +22,7 @@ class OthersRequest extends React.Component {
 	 menus = [
     {
       img: Profile,
-      to: '/profile',
+      to: '/looper/profile/myprofile',
       text: 'Profile',
     },
     {
@@ -32,8 +32,8 @@ class OthersRequest extends React.Component {
     },
     {
       img: RateLooper,
-      to: '/rate-looper',
-      text: 'Rate a Looper',
+      to: '/ratings/ratehero',
+      text: 'Rate a Hero',
     },
     {
       img: HallofFame,
@@ -42,17 +42,17 @@ class OthersRequest extends React.Component {
     },
     {
       img: HeroLog,
-      to: '/hero-log',
+      to: '/ratings/myheroapp',
       text: 'My Hero Log',
     },
     {
       img: Task,
-      to: '/tasks',
+      to: '/hero/request/mytasks',
       text: 'My Tasks',
     },
     {
       img: Map,
-      to: '/map',
+      to: '/request/map',
       text: 'The Map',
     },
     {

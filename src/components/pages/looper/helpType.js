@@ -19,10 +19,10 @@ import Other from "../../../assets/img/tasks/other.svg";
 
 
 class RequestHelpType extends React.Component {
-	  menus = [
+	menus = [
     {
       img: Profile,
-      to: '/profile',
+      to: '/looper/profile/myprofile',
       text: 'Profile',
     },
     {
@@ -32,8 +32,8 @@ class RequestHelpType extends React.Component {
     },
     {
       img: RateLooper,
-      to: '/rate-looper',
-      text: 'Rate a Looper',
+      to: '/ratings/ratehero',
+      text: 'Rate a Hero',
     },
     {
       img: HallofFame,
@@ -42,17 +42,17 @@ class RequestHelpType extends React.Component {
     },
     {
       img: HeroLog,
-      to: '/hero-log',
+      to: '/ratings/myheroapp',
       text: 'My Hero Log',
     },
     {
       img: Task,
-      to: '/tasks',
+      to: '/hero/request/mytasks',
       text: 'My Tasks',
     },
     {
       img: Map,
-      to: '/map',
+      to: '/request/map',
       text: 'The Map',
     },
     {
@@ -75,25 +75,25 @@ class RequestHelpType extends React.Component {
           </div>
 
             <div className="helptype">
-			 <div className="food1">
+			 <div className="req_food">
 			   <Link to="/looper/request/foodRequest">
                   <img align="center" alt="" src={Food} className={Food} />
 		       </Link>
 			 </div>
-			 <div className="trans">
+			 <div className="req_trans">
                 <Link to="/looper/request/transRequest">
                    <img alt="" src={Transport} className={Transport} />
 				   <p>Transport</p>
                 </Link>
 			  </div>
-			  <div className="med">
+			  <div className="req_med">
 				<Link to="/looper/request/medRequest">
                   <img align="center" alt="" src={Pharmacy} className={Pharmacy} />
 				  <p style={{color:"black"}}>Pharmacy</p>
 
                 </Link>
 			  </div>
-			  <div className="other">
+			  <div className="req_other">
 				<Link to="/looper/request/othersRequest">
                   <img align="center" alt="" src={Other} className={Other} />
 				  <p>Other</p>

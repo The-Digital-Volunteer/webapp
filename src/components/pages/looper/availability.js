@@ -80,15 +80,16 @@ const Availability = () => {
 
     // render() {
     return (
-	    <div>
-		
+	    
 		<center>
+		<div className="avail">
+		
             <div className='profile-bg-availability'>
               
                 <h1 className='my-availability'>My availability</h1>
                 <h4 className='h4-availability'>you can select any section</h4>
             </div>
-            <div>
+            <div className="day">
                 <button className='weekdays'  id={isWeekdays? 'days-selected' : 'id-days'} onClick={() => {
                     setIsWeekdays(!isWeekdays);
                     setisWeekends(false);
@@ -143,9 +144,9 @@ const Availability = () => {
                 <button className='save-availability'>Next-Final Confirmation</button>
 			</Link>
             </div>
+			</div>
 			</center>
 		
-        </div>
 	
 
     )

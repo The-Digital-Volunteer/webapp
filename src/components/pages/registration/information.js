@@ -87,7 +87,7 @@ class RegistrationInformation extends React.Component {
 
     const { street, postalCode, city } = address
 
-    const current = 3;
+    const current = 4;
 
 
 
@@ -150,15 +150,6 @@ class RegistrationInformation extends React.Component {
 
               />
 
-            </Form.Group>
-
-            <Form.Group>
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="text"  size="lg" name="email" placeholder="Enter your Email"
-               onChange={ this._onChange }
-
-               value={ email }
-               />
             </Form.Group>
 
             <Form.Group>

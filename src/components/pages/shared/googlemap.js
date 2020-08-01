@@ -37,68 +37,7 @@ export default function MapContainer(props) {
     libraries,
   })
   const [weather, setWeather] = useState({})
-  const [markers, setMarkers] = useState([
-    {
-      id: 1,
-      title: 'Grocery shopping',
-      owner: 'Agda',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utporttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitaemassa vulputate, auctor metus seLorem ipsum dolor sit amet,consectetur adipiscing elit. Ut porttitor facilisis massa velmaximus. Nulla facilisi.',
-      lat: 43.653225,
-      lng: -79.383186,
-      type: 'food',
-      timeSlots: ['01:00-02:00', '02:00-03:00', '03:00-04:00'],
-    },
-    {
-      id: 2,
-      title: 'Travel',
-      owner: 'Agda1',
-      description: 'Lorem ipsum dolor sit amet, ',
-      lat: 43.853225,
-      lng: -79.383186,
-      type: 'travel',
-      timeSlots: [
-        '01:00-02:00',
-        '02:00-03:00',
-        '03:00-04:00',
-        '05:00-06:00',
-      ],
-    },
-    {
-      id: 3,
-      title: 'Pharmacy',
-      owner: 'Agda2',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utporttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitaemassa vulputate, auctor metus seLorem ipsum dolor sit amet,consectetur adipiscing elit. Ut porttitor facilisis massa velmaximus. Nulla facilisi.',
-      lat: 43.1153225,
-      lng: -79.383186,
-      type: 'pharmacy',
-      timeSlots: [
-        '01:00-02:00',
-        '02:00-03:00',
-        '03:00-04:00',
-        '05:00-06:00',
-      ],
-    },
-    {
-      id: 4,
-      title: 'Other',
-      owner: 'Agda3',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utporttitor facilisis massa vel maximus. Nulla facilisi. Aenean vitaemassa vulputate, auctor metus seLorem ipsum dolor sit amet,consectetur adipiscing elit. Ut porttitor facilisis massa velmaximus. Nulla facilisi.',
-      lat: 44,
-      lng: -79.383186,
-      type: 'other',
-      timeSlots: [
-        '01:00-02:00',
-        '02:00-03:00',
-        '03:00-04:00',
-        '05:00-06:00',
-        '07:00-08:00',
-        '09:00-10:00',
-      ],
-    },
-  ])
+  const [markers, setMarkers] = useState(props.markers)
   const [filteredMarkers, setFilteredMarkers] = useState(markers)
   const [selected, setSelected] = useState(null)
   const [toggle, setToggle] = useState(false)

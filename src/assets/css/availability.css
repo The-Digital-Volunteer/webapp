@@ -10,8 +10,6 @@
     position: absolute;
   width: 414px;
   height: 157px;
-  left: -1px;
-  top: 0px;
   
   background: #68ADEC;
   }
@@ -739,4 +737,11 @@
     color: white;
   }
   
-  
+  .avail{
+position: absolute;
+  width: 414px;
+  height: 157px;
+  left:30%;
+  top:30px;
+  	  
+  }

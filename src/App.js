@@ -13,6 +13,7 @@ import RegistrationInformation from "./components/pages/registration/information
 import RegistrationSkills from "./components/pages/registration/skills";
 import RegistrationFinish from "./components/pages/registration/finish";
 
+import HeroBoarding from "./components/pages/hero/heroBoarding";
 
 
 import SelectType from "./components/pages/looper/selectType"
@@ -27,6 +28,7 @@ import DeliveryPayment from "./components/pages/looper/deliveryPayment"
 import Availability from "./components/pages/looper/availability"
 import RequestSplashScreen from "./components/pages/looper/reqSplashScreen"
 import RequestFinish from "./components/pages/looper/requestFinish"
+import RatingFinish from "./components/pages/ratings/ratingsFinish"
 
 import Watson from "./components/pages/Watson"
 
@@ -54,6 +56,8 @@ import MyHeroApp from "./components/pages/ratings/myheroapp"
 import RateHero from "./components/pages/ratings/ratehero"
 import RateLooper from "./components/pages/ratings/ratelooper"
 
+import AcceptHero from "./components/pages/hero/acceptHero"
+
 
 import persistentStore from './stores/PersistentStore'
 
@@ -67,6 +71,8 @@ import "./assets/css/looper2.css";
 import "./assets/css/Map.css";
 import "./assets/css/availability.css";
 import "./assets/css/profilewebcss.css";
+import "./assets/css/profile.css";
+import "./assets/css/hero_board.css";
 
 
 import "./assets/css/media-queries.css";
@@ -100,10 +106,10 @@ class App extends Component {
 
     const { userData } = this.state;
     const authOptions = {
-      redirectTo: 'registration/alternatives',
+      redirectTo: '/registration/alternatives',
       appDetails: {
         name: "Digital Volunteers",
-        icon: window.location.origin + '/logo.64bba70f.png',
+        icon: window.location.origin + '/logo.png',
       },
       userSession,
       finished: ({ userSession }) => {
@@ -117,15 +123,16 @@ class App extends Component {
 
         if (response.profile === null) {
 
-          this.props.history.push("registration/alternatives" );
-          window.location.reload();
+          //setNotFound(true);
+          this.props.history.push("/registration/information" );
          
 
         } 
         else {
           this.setState({userProfile: (userSession)});
-          this.props.history.push("/helper/map" );
-          window.location.reload();
+          console.log("Userprofile found");
+          console.log("UserProfile: ", this.state.userProfile);
+          this.setState({ redirect: '/help-request' }); 
         }
         }
 
@@ -162,7 +169,15 @@ class App extends Component {
                   <Route path="/helper/map" component={HelperMap} />
                   <Route path="/request/map" component={RequestMap} />
 				  <Route path="/helper/markerInfoWindow" component={MarkerInfoWindow} />
-				  
+				  <Route path="/ratings/ratingsFinish" component={RatingFinish} />
+				  <Route path="/looper/availability" component={Availability} />
+				  <Route path="/request/helpType" component={RequestHelpType} />
+                  <Route path="/hero/heroBoarding" component={HeroBoarding} />
+                  <Route path="/hero/acceptHero" component={AcceptHero} />
+                  <Route path="/ratings/ratehero" component={RateHero} />
+                  
+				
+
                   <LandingLayout>
                   <Route path="/welcome" component={Welcome} />
 				  
@@ -174,23 +189,13 @@ class App extends Component {
 				  
                   <Route path="/registration/skills" component={RegistrationSkills} />
                   <Route path="/registration/finish" component={RegistrationFinish} />
-                  <Route path="/request/helpType" component={RequestHelpType} />
                   
-				  
-
-
-
-				  <Route path="/hero/request/mytaskswebhero" component={MyTasksWebHero} />
-                  
-
-				<Route path="/looper/availability" component={Availability} />
+				 
+	            <Route path="/hero/request/mytaskswebhero" component={MyTasksWebHero} />
+               
 				<Route path="/looper/reqSplashScreen" component={RequestSplashScreen} />
 			   <Route path="/looper/requestFinish" component={RequestFinish} />
-			
-
-
 				 <Route path="/ratings/myheroapp" component={MyHeroApp} />
-                  <Route path="/ratings/ratehero" component={RateHero} />
                   <Route path="/ratings/ratelooper" component={RateLooper} />
                   
 
