@@ -183,7 +183,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 Automated unit tests are run for this platform to ensure that sections of the application meets its design and behaves as intended.
 
 ### Live demo
-You can already join TheHeroLoop at: dev.thedigitalvolunteer.se/welcome (Soon to be  www.TheHeroLoop.com after Call for Code submission).
+You can already join TheHeroLoop at: http://dev.thedigitalvolunteer.se/welcome (Soon to be  www.TheHeroLoop.com after Call for Code submission).
 
 
 ## Built with
