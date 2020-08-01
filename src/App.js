@@ -109,7 +109,7 @@ class App extends Component {
       redirectTo: '/registration/alternatives',
       appDetails: {
         name: "Digital Volunteers",
-        icon: window.location.origin + '/logo.png',
+        icon: window.location.origin + '/logo.64bba70f.png',
       },
       userSession,
       finished: ({ userSession }) => {
@@ -123,16 +123,15 @@ class App extends Component {
 
         if (response.profile === null) {
 
-          //setNotFound(true);
-          this.props.history.push("/registration/information" );
+          this.props.history.push("/registration/alternatives" );
+          window.location.reload();
          
 
         } 
         else {
           this.setState({userProfile: (userSession)});
-          console.log("Userprofile found");
-          console.log("UserProfile: ", this.state.userProfile);
-          this.setState({ redirect: '/help-request' }); 
+          this.props.history.push("/helper/map" );
+          window.location.reload();
         }
         }
 
@@ -141,6 +140,7 @@ class App extends Component {
         
     },
   };
+  
     return (
       <Connect className="App" authOptions={authOptions}>
       <Provider {...persistentStore}>
